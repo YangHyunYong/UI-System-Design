@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            color: white;
+        }
+
+        .container {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            background-color: #0E0E0E;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(9, minmax(80px, auto));
+            /* gap: 10px 20px; */
+        }
+
+        .logo {
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+
+        .left_nav {
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 2;
+            grid-row-end: 9;
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+
+        .top_space {
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 12;
+        }
+
+        .top_nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 9;
+            grid-column-end: 13;
+        }
+
+        .top_nav_content {
+            text-align: center;
+            flex: 1;
+            font-family: AppleSDGothicNeoEB00;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 32px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .top_nav_content:hover{
+            color: #FF3900;
+        }
+
+        .main_content {
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            border-left: 0.8px solid rgba(220, 220, 220, 0.8);
+            border-right: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 1;
+            grid-row-end: 9;
+            grid-column-start: 2;
+            grid-column-end: 9;
+        }
+
+        .right_side {
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 2;
+            grid-row-end: 9;
+            grid-column-start: 9;
+            grid-column-end: 13;
+        }
+
+        .bottom_bar {
+            background-color: #FF4915;
+            border-left: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 9;
+            grid-row-end: 10;
+            grid-column-start: 2;
+            grid-column-end: 13;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo"></div>
+        <div class="left_nav"></div>
+        <div class="top_nav">
+            <div class="top_nav_content">융합연계</div>
+            <div class="top_nav_content">창의작품</div>
+            <div class="top_nav_content">개인작품</div>
+        </div>
+        <div class="top_space"></div>
+        <div class="main_content"></div>
+        <div class="right_side"></div>
+        <div class="bottom_bar">
+
+        </div>
+    </div>
+</body>
+
+</html>
