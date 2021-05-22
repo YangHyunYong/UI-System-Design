@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            color: rgba(255, 255, 255, 0.9);
+            -ms-overflow-style: none;
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+
+        .container {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            background-color: #0E0E0E;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(9, minmax(50px, auto));
+            /* gap: 10px 20px; */
+        }
+
+        .logo {
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+
+        .left_nav {
+            display: grid;     
+            grid-template-rows: 2fr 1fr 3fr;
+            align-items: center;       
+            text-align: center;
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 2;
+            grid-row-end: 9;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            font-family: KoPubWorldDotum;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 18px;
+        }            
+        .left_nav .department{
+            transform: rotate(270deg);
+            padding:5px;
+            background-color: #FF3900;
+
+        }
+        .left_nav .department:hover{
+            background-color: #FF3900;
+        }
+        .left_nav .professor{
+            transform: rotate(270deg);
+            padding:5px;
+        }
+        .left_nav .professor:hover{
+            background-color: #FF3900;
+        }
+        .left_nav .student{
+            border: 1.2px solid #FFFFFF;
+            border-radius: 100%;
+            padding:20px;
+            transform: rotate(270deg);
+        }
+        .left_nav .student:hover{
+            background-color: #FF3900;
+        }
+
+        .top_space {
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 9;
+        }
+
+        .top_nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 9;
+            grid-column-end: 13;
+        }
+
+        .top_nav_content {
+            text-align: center;
+            flex: 1;
+            font-family: AppleSDGothicNeoEB00;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 32px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .top_nav_content:hover {
+            color: #FF3900;
+        }
+
+        .main_content {
+            max-height: 100vh;
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            border-left: 0.8px solid rgba(220, 220, 220, 0.8);
+            border-right: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 1;
+            grid-row-end: 9;
+            grid-column-start: 2;
+            grid-column-end: 9;
+            padding: 80px 30px 0 30px;
+            overflow:auto;
+        }
+        .main_content .content_title{
+            font-family: AppleSDGothicNeoB00;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            margin:10px 0;
+            padding: 10px 0;
+        }
+        .main_content .content_image_list{
+            display: grid;
+            grid-template-columns: repeat(3, minmax(180px, auto));
+            grid-auto-rows: minmax(180px, auto);
+            grid-gap:50px;
+        }
+        .main_content #content_image{
+            width:100%;
+        }
+
+        .right_side {
+            display: grid;
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 2;
+            grid-row-end: 9;
+            grid-column-start: 9;
+            grid-column-end: 13;
+
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(7, minmax(50px, auto));
+        }
+        .right_side .content_desc {
+            padding: 15px 20px 15px 20px;
+            /* 934px 기준으로 grid칸이 안맞음 */
+            font-family: KoPubWorldDotum;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.8vh;
+            line-height: 22px;
+            text-align: left;
+            letter-spacing: -0.01em;
+            text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+            
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        .right_side .student_list {
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 3;
+            grid-row-end: 7;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        .right_side .student_list .student_list_title{
+            padding:15px 20px 10px 20px;
+            font-family: AppleSDGothicNeoB00;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: 0.01em;
+        }
+        .right_side .student_list .student_list_content{
+            display:grid;
+            padding: 0 10px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(8,minmax(20px,auto));
+        }
+        .right_side .student_list .student_list_content .student_list_name{
+            padding: 8px;
+            text-align: center;
+        }
+        .right_side .right_side_bottomline{
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: minmax(50px,auto);
+
+            grid-row-start: 7;
+            grid-row-end: 8;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        .right_side .right_side_bottomline .line_list{
+            display:grid;
+            grid-template-columns: repeat(15, 1fr);
+            grid-template-rows: minmax(50px,auto);
+            border-right: 0.5px solid rgba(220, 220, 220);
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .right_side .right_side_bottomline .line_list .line{
+            border-right: 1.2px solid rgba(220, 220, 220);
+        }
+        .right_side .right_side_bottomline .speaker{
+            text-align: center;
+            grid-column-start: 4;
+            grid-column-end: 5;
+        }
+        #mouth {
+            height:100%;
+        }
+
+        .bottom_bar {
+            background-color: #FF4915;
+            border-left: 0.8px solid rgba(220, 220, 220, 0.8);
+            grid-row-start: 9;
+            grid-row-end: 10;
+            grid-column-start: 2;
+            grid-column-end: 13;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo"></div>
+        <div class="left_nav">
+            <div class="department">디자인 학부</div>
+            <div class="professor">교수 인터뷰</div>
+            <div class="student">학생</div>
+        </div>
+        <div class="top_nav">
+            <div class="top_nav_content">융합연계</div>
+            <div class="top_nav_content">창의작품</div>
+            <div class="top_nav_content">개인작품</div>
+        </div>
+        <div class="top_space"></div>
+        <div class="main_content">
+            <div class="content_title">융합연계</div>
+            <div class="content_image_list">
+                <img id="content_image" src="./image/image1.png"><img id="content_image" src="./image/image2.png"> <img id="content_image" src="./image/image3.png">
+                <img id="content_image" src="./image/image4.png"><img id="content_image" src="./image/image5.png"> <img id="content_image" src="./image/image6.png">
+                <img id="content_image" src="./image/image7.png"><img id="content_image" src="./image/image8.png"> <img id="content_image" src="./image/image9.png">
+                <img id="content_image" src="./image/image10.png"><img id="content_image" src="./image/image11.png"> <img id="content_image" src="./image/image12.png">
+
+            </div>
+        </div>
+        <div class="right_side">
+            <div class="content_desc">
+                사용자중심 디자인 원리에 기반하여 인터랙티브 미디어를 구현할 수 있는 실무형 인재 육성을 목표로한다. 모바일앱, 웹, 체감형 콘텐츠를 활용한 인터랙티브 미디어를 구현하기 위해 사용자
+                조사와 분석, UX/UI, 콘텐츠 기획, 2D/3D 그래픽 디자인, 프로그램 개발 과정을 통합적으로 수행할 수 있는 디자이너를 양성한다.
+            </div>
+            <div class="student_list">
+                <div class="student_list_title">참여학생</div>
+                <div class="student_list_content">
+                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
+                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
+                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
+                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
+                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
+                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
+                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
+                </div>
+            </div>
+            <div class="right_side_bottomline">
+                <div class="line_list">
+                    <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div>
+                </div>
+                <div class="speaker"><img id="mouth" src="./icon/mouth_open.svg"></div>
+            </div>
+        </div>
+        <div class="bottom_bar">
+
+        </div>
+    </div>
+</body>
+
+</html>
