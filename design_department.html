@@ -25,8 +25,8 @@
             width: 100%;
             height: 100%;
             background-color: #0E0E0E;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(9, minmax(50px, auto));
+            grid-template-columns: 100px repeat(11, 1fr);
+            grid-template-rows: 60px repeat(7, minmax(50px, auto)) 50px;
             /* gap: 10px 20px; */
         }
 
@@ -36,6 +36,28 @@
             grid-row-end: 2;
             grid-column-start: 1;
             grid-column-end: 1;
+        }
+
+        .sector {
+            display: grid;
+
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 8;
+            grid-column-end: 9;
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+        .sector #sector_form{
+            border: 3px solid #FF2E00;
+            border-radius: 0 0 0 100px;
+            margin: -10px -10px 10px 0px;
+            width:8vh;
+            height: 8vh;
+            grid-column-start: 3;
+            grid-column-end: 3;
+            
         }
 
         .left_nav {
@@ -81,6 +103,8 @@
         }
 
         .top_space {
+            border-left: 0.8px solid rgba(220, 220, 220, 0.8);
+            border-right: 0.8px solid rgba(220, 220, 220, 0.8);
             border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
             grid-row-start: 1;
             grid-row-end: 2;
@@ -110,6 +134,10 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
+        .top_nav_content:first-child{
+            color: #FF3900;
+        }
+
         .top_nav_content:hover {
             color: #FF3900;
         }
@@ -119,11 +147,11 @@
             border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
             border-left: 0.8px solid rgba(220, 220, 220, 0.8);
             border-right: 0.8px solid rgba(220, 220, 220, 0.8);
-            grid-row-start: 1;
+            grid-row-start: 2;
             grid-row-end: 9;
             grid-column-start: 2;
             grid-column-end: 9;
-            padding: 80px 30px 0 30px;
+            padding: 0px 30px 0 30px;
             overflow:auto;
         }
         .main_content .content_title{
@@ -137,13 +165,20 @@
         }
         .main_content .content_image_list{
             display: grid;
-            grid-template-columns: repeat(3, minmax(180px, auto));
-            grid-auto-rows: minmax(180px, auto);
+            grid-template-columns: repeat(3, minmax(140px, auto));
+            grid-auto-rows: minmax(140px, auto);
             grid-gap:50px;
         }
-        .main_content #content_image{
-            width:100%;
+        .main_content .content_image{
+            display: block;
+            margin: auto;
+            border: 5px solid #0E0E0E;
+            width: auto;
         }
+        .main_content .content_image:hover{
+            border: 5px double #ff3900;
+        }
+        
 
         .right_side {
             display: grid;
@@ -244,6 +279,9 @@
 <body>
     <div class="container">
         <div class="logo"></div>
+        <div class="sector">
+            <div id="sector_form"></div>
+        </div>
         <div class="left_nav">
             <div class="department">디자인 학부</div>
             <div class="professor">교수 인터뷰</div>
@@ -258,10 +296,10 @@
         <div class="main_content">
             <div class="content_title">융합연계</div>
             <div class="content_image_list">
-                <img id="content_image" src="./image/image1.png"><img id="content_image" src="./image/image2.png"> <img id="content_image" src="./image/image3.png">
-                <img id="content_image" src="./image/image4.png"><img id="content_image" src="./image/image5.png"> <img id="content_image" src="./image/image6.png">
-                <img id="content_image" src="./image/image7.png"><img id="content_image" src="./image/image8.png"> <img id="content_image" src="./image/image9.png">
-                <img id="content_image" src="./image/image10.png"><img id="content_image" src="./image/image11.png"> <img id="content_image" src="./image/image12.png">
+                <img class="content_image" src="./image/image1.png"><img class="content_image" src="./image/image2.png"> <img class="content_image" src="./image/image3.png">
+                <img class="content_image" src="./image/image4.png"><img class="content_image" src="./image/image5.png"> <img class="content_image" src="./image/image6.png">
+                <img class="content_image" src="./image/image7.png"><img class="content_image" src="./image/image8.png"> <img class="content_image" src="./image/image9.png">
+                <img class="content_image" src="./image/image10.png"><img class="content_image" src="./image/image11.png"> <img class="content_image" src="./image/image12.png">
 
             </div>
         </div>
