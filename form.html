@@ -78,14 +78,14 @@
         }            
         .left_nav .department{
             padding:5px;
-            background-color: #FF5924;
+            background-color: #FF3900;
             transform: rotate(270deg);
 
             grid-row-start: 3;
             grid-row-end: 5;
         }
         .left_nav .department:hover{
-            background-color: #FF5924;
+            background-color: #FF3900;
         }
         .left_nav .professor{
             transform: rotate(270deg);
@@ -94,7 +94,7 @@
             grid-row-end: 8;
         }
         .left_nav .professor:hover{
-            background-color: #FF5924;
+            background-color: #FF3900;
         }
         .left_nav .student{
             border: 1.2px solid #FFFFFF;
@@ -105,7 +105,7 @@
             grid-row-end: 14;
         }
         .left_nav .student:hover{
-            background-color: #FF5924;
+            background-color: #FF3900;
         }
 
         .left_bottom_space {
@@ -162,11 +162,11 @@
         }
 
         .right_nav_content:first-child{
-            color: #FF5924;
+            color: #FF3900;
         }
 
         .right_nav_content:hover {
-            color: #FF5924;
+            color: #FF3900;
         }
 
         .main_content {
@@ -202,7 +202,7 @@
             width: auto;
         }
         .main_content .content_image:hover{
-            border: 5px double #FF5924;
+            border: 5px double #ff3900;
         }
         
 
@@ -276,13 +276,13 @@
             display:grid;
             grid-template-columns: repeat(50, 1fr);
             grid-template-rows: minmax(50px,auto);
+            border-right: 0.5px solid rgba(220, 220, 220);
             grid-column-start: 1;
             grid-column-end: 5;
         }
         .right_side .right_side_bottomline .line_list .line{
             border-right: 1.2px solid rgba(220, 220, 220);
         }
-        
         
     </style>
 </head>
@@ -304,7 +304,8 @@
             <div class="right_nav_content">창의작품</div>
             <div class="right_nav_content">개인작품</div>
         </div>
-        <div class="top_space"></div>
+        <div class="top_space">
+        </div>
         <div class="speaker"><img id="mouth" src="./icon/mouth_open.svg"></div>
         <div class="main_content">
             <div class="content_title">융합연계</div>

@@ -25,7 +25,7 @@
             width: 100%;
             height: 100%;
             background-color: #0E0E0E;
-            grid-template-columns: 100px repeat(11, 1fr);
+            grid-template-columns: 95px repeat(11, 1fr);
             grid-template-rows: 60px repeat(7, minmax(50px, auto)) 50px;
             /* gap: 10px 20px; */
         }
@@ -40,7 +40,7 @@
 
         .left_nav {
             display: grid;     
-            grid-template-rows: 2fr 1fr 3fr;
+            grid-template-rows: repeat(16, minmax(40px, auto)) ;
             align-items: center;       
             text-align: center;
             border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
@@ -53,91 +53,105 @@
             font-weight: bold;
             font-size: 18px;
             line-height: 18px;
-        }            
+        }         
         .left_nav .department{
-            transform: rotate(270deg);
             padding:5px;
-            background-color: #FF3900;
+            background-color: #ff5924;
+            transform: rotate(270deg);
+
+            grid-row-start: 3;
+            grid-row-end: 5;
         }
         .left_nav .department:hover{
-            background-color: #FF3900;
+            background-color: #ff5924;
         }
         .left_nav .professor{
             transform: rotate(270deg);
             padding:5px;
+            grid-row-start: 7;
+            grid-row-end: 8;
         }
         .left_nav .professor:hover{
-            background-color: #FF3900;
+            background-color: #ff5924;
         }
         .left_nav .student{
             border: 1.2px solid #FFFFFF;
-            border-radius: 100%;
-            padding:20px;
+            border-radius: 50%;
+            padding:10px;
             transform: rotate(270deg);
+            grid-row-start: 13;
+            grid-row-end: 14;
         }
         .left_nav .student:hover{
-            background-color: #FF3900;
+            background-color: #ff5924;
+        }
+
+        .left_bottom_space {
+            background-color: #FF5924;
+            grid-row-start: 9;
+            grid-row-end: 10;
+            grid-column-start: 1;
+            grid-column-end: 1;
         }
 
         .top_space {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
+            border-left: 0.8px solid rgba(220, 220, 220, 0.8);
+            border-right: 0.8px solid rgba(220, 220, 220, 0.8);
+            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+    
             grid-row-start: 1;
             grid-row-end: 2;
             grid-column-start: 2;
-            grid-column-end: 9;
+            grid-column-end: 13;
         }
-        .top_space #cancel_icon{
-            display: block;
-            width:20px;
-            height: 20px;
-            margin:auto 20px;
-            padding:3px;
+        .speaker{
+            border-left: 0.8px solid rgba(220, 220, 220, 0.8);
+            text-align: center;
             grid-row-start: 1;
             grid-row-end: 2;
-            grid-column-start: 2;
-            grid-column-end: 2;
-            border: 1.5px solid rgba(220, 220, 220, 0.9);
-            z-index: 1;
+            grid-column-start: 12;
+            grid-column-end: 13;
+        }
+        #mouth {
+            height: 100%;
         }
 
-        .top_nav {
+        .right_nav {
             display: flex;
             justify-content: center;
             align-items: center;
             border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
-            grid-row-start: 1;
-            grid-row-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
             grid-column-start: 9;
             grid-column-end: 13;
+            height: 60px;
         }
 
-        .top_nav_content {
+        .right_nav_content {
             text-align: center;
             flex: 1;
             font-family: AppleSDGothicNeoEB00;
             font-style: normal;
             font-weight: normal;
-            font-size: 22px;
+            font-size: 20px;
             line-height: 32px;
             color: rgba(255, 255, 255, 0.9);
         }
-        .top_nav_content:first-child{
-            color: #FF3900;
+        .right_nav_content:first-child{
+            color: #FF5924;
         }
-        .top_nav_content:hover {
-            color: #FF3900;
+        .right_nav_content:hover {
+            color: #FF5924;
         }
 
         .main_content {
             display:block;
             max-height: 100vh;
-            border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
             border-left: 0.8px solid rgba(220, 220, 220, 0.8);
             border-right: 0.8px solid rgba(220, 220, 220, 0.8);
-            grid-row-start: 1;
-            grid-row-end: 9;
+            grid-row-start: 2;
+            grid-row-end: 10;
             grid-column-start: 2;
             grid-column-end: 9;
             overflow:auto;
@@ -147,17 +161,28 @@
             height: 30%;
             width: 100%;
         }
+        #cancel_icon{
+            width: 15px;
+            height: 15px;
+            margin: 10px 10px 5px auto;
+            padding:3px;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 8;
+            grid-column-end: 9;
+            border: 1.5px solid rgba(220, 220, 220, 0.9);
+            z-index: 1;
+        }
         .main_content .main_content_detail{
-            height: 70%;
-            display: grid;
-            grid-template-columns: 50% 50%;
-            padding: 0 20px;
+            height: 100%;
+            padding: 35px 35px;
         }            
         .main_content .main_content_detail .detail_desc{
-            padding: 30px 20px;
-            height: 200px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 180px;
         }
-        .main_content .main_content_detail .detail_desc .detail_desc_title{
+        .main_content .main_content_detail .detail_desc_title{
             font-family: KoPubWorldDotum;
             font-style: normal;
             font-weight: bold;
@@ -165,6 +190,8 @@
             line-height: 25px;
             letter-spacing: 0.03em;
             color: #FFFFFF;
+            padding-left: 10px;
+            padding-bottom: 5px;
         }
         .main_content .main_content_detail .detail_desc .detail_desc_content{
             font-family: KoPubWorldDotum;
@@ -176,19 +203,19 @@
             letter-spacing: -0.01em;
             color: rgba(255, 255, 255, 0.9);
             text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
-            padding-top:20px;
+            padding: 10px 10px 0 10px;
         }
         .main_content .main_content_detail .detail_image{
             background-size: cover;
-            padding: 30px 0px;
             width: 100%;
-            height:200px;
+            height: 50%;
+            padding-bottom: 20px;
         }
         .right_side {
             display: grid;
             border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
-            grid-row-start: 2;
-            grid-row-end: 9;
+            grid-row-start: 3;
+            grid-row-end: 10;
             grid-column-start: 9;
             grid-column-end: 13;
 
@@ -207,7 +234,7 @@
             grid-column-end: 4;
         }
         .right_side .caption {
-            padding: 25px 25px 0 25px;
+            padding: 10px 25px 0 25px;
             font-family: KoPubWorldDotum;
             font-style: normal;
             font-weight: 500;
@@ -277,7 +304,7 @@
         }        
 
         .right_side .guestbook {
-            padding: 25px 10px 0 25px;
+            padding: 20px 10px 10px 25px;
             border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
             grid-row-start: 6;
             grid-row-end: 8;
@@ -399,15 +426,6 @@
             display: block;
             margin: auto;
         }
-
-        .bottom_bar {
-            background-color: #FF4915;
-            border-left: 0.8px solid rgba(220, 220, 220, 0.8);
-            grid-row-start: 9;
-            grid-row-end: 10;
-            grid-column-start: 2;
-            grid-column-end: 13;
-        }
     </style>
 </head>
 
@@ -419,27 +437,30 @@
             <div class="professor">교수 인터뷰</div>
             <div class="student">학생</div>
         </div>
-        <div class="top_nav">
-            <div class="top_nav_content">융합연계</div>
-            <div class="top_nav_content">창의작품</div>
-            <div class="top_nav_content">개인작품</div>
+        <div class="left_bottom_space"></div>
+        <div class="right_nav">
+            <div class="right_nav_content">융합연계</div>
+            <div class="right_nav_content">창의작품</div>
+            <div class="right_nav_content">개인작품</div>
         </div>
-        <div class="top_space">
-            <img id="cancel_icon" src="./icon/cancel.svg">
-        </div>
+        <div class="top_space"></div>
+        <div class="speaker"><img id="mouth" src="./icon/mouth_open.svg"></div>
+        <img id="cancel_icon" src="./icon/cancel.svg">
         <div class="main_content">
-            <img id="hero_image" src="./image/hero_image.png">
             <div class="main_content_detail">
-                <div class="detail_desc"><div class="detail_desc_title">'나의 미래를 기록하다'</div><div class="detail_desc_content">사용자중심 디자인 원리에 기반하여 인터랙티브 미디어를 구현할 수 있는 실무형 인재 육성을 목표로한다. 모바일앱, 웹, 체감형 콘텐츠를 활용한 인터랙티브 미디어를 구현하기 위해 사용자 조사와 분석, UX/UI, 콘텐츠 기획, 2D/3D 그래픽 디자인, 프로그램 개발 과정을 통합적으로 수행할 수 있는 디자이너를 양성한다.</div></div> 
+                <div class="detail_desc_title">'나의 미래를 기록하다'</div>
+                <div class="detail_desc">
+                    <div class="detail_desc_content">사용자중심 디자인 원리에 기반하여 인터랙티브 미디어를 구현할 수 있는 실무형 인재 육성을 목표로한다. 모바일앱, 웹, 체감형 콘텐츠를 활용한 인터랙티브 미디어를 구현하기 위해 사용자 조사와 분석, UX/UI, 콘텐츠 기획, 2D/3D 그래픽 디자인, 프로그램 개발 과정을 통합적으로 수행할 수 있는 디자이너를 양성한다.</div>
+                    <div class="detail_desc_content">사용자중심 디자인 원리에 기반하여 인터랙티브 미디어를 구현할 수 있는 실무형 인재 육성을 목표로한다. 모바일앱, 웹, 체감형 콘텐츠를 활용한 인터랙티브 미디어를 구현하기 위해 사용자 조사와 분석, UX/UI, 콘텐츠 기획, 2D/3D 그래픽 디자인, 프로그램 개발 과정을 통합적으로 수행할 수 있는 디자이너를 양성한다.</div>
+                </div> 
                 <img class="detail_image" src="image/content_image1.png">
-                <img class="detail_image" src="image/content_image1.png">
-                <div class="detail_desc"><div class="detail_desc_title">'나의 미래를 기록하다'</div><div class="detail_desc_content">사용자중심 디자인 원리에 기반하여 인터랙티브 미디어를 구현할 수 있는 실무형 인재 육성을 목표로한다. 모바일앱, 웹, 체감형 콘텐츠를 활용한 인터랙티브 미디어를 구현하기 위해 사용자 조사와 분석, UX/UI, 콘텐츠 기획, 2D/3D 그래픽 디자인, 프로그램 개발 과정을 통합적으로 수행할 수 있는 디자이너를 양성한다.</div></div> 
-                <div class="detail_desc"><div class="detail_desc_title">'나의 미래를 기록하다'</div><div class="detail_desc_content">사용자중심 디자인 원리에 기반하여 인터랙티브 미디어를 구현할 수 있는 실무형 인재 육성을 목표로한다. 모바일앱, 웹, 체감형 콘텐츠를 활용한 인터랙티브 미디어를 구현하기 위해 사용자 조사와 분석, UX/UI, 콘텐츠 기획, 2D/3D 그래픽 디자인, 프로그램 개발 과정을 통합적으로 수행할 수 있는 디자이너를 양성한다.</div></div> 
-                <img class="detail_image" src="image/content_image1.png">
+                <img class="detail_image" src="image/image3.png">
+                <img class="detail_image" src="image/image4.png">
+                <img class="detail_image" src="image/image5.png">
+                <img class="detail_image" src="image/image6.png">
             </div>
         </div>
         <div class="right_side">
-            <img id="speaker" src="icon/speaker_mute.svg">
             <div class="caption">
                 <div class="caption_title">'곧' 미래앨범</div>
                 <div class="caption_subtitle">'Soon" Future Album</div>
@@ -495,9 +516,6 @@
                 <div class="right_side_bottomline_middle"></div>
                 <div class="right_side_bottomline_right"><img id="arrow_right" src="./icon/arrow_right.svg">다음작품</div>
             </div>
-        </div>
-        <div class="bottom_bar">
-
         </div>
     </div>
 </body>
