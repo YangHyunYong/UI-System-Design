@@ -40,7 +40,6 @@
 
         .sector {
             display: grid;
-
             grid-row-start: 2;
             grid-row-end: 3;
             grid-column-start: 8;
@@ -180,42 +179,19 @@
             padding: 0px 30px 0 30px;
             overflow:auto;
         }
-        .main_content .content_title{
-            font-family: AppleSDGothicNeoB00;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 25px;
-            margin:10px 0;
-            padding: 10px 0;
-        }
-        .main_content .content_image_list{
-            display: grid;
-            grid-template-columns: repeat(3, minmax(140px, auto));
-            grid-auto-rows: minmax(140px, auto);
-            grid-gap:50px;
-        }
-        .main_content .content_image{
-            display: block;
-            margin: auto;
-            border: 5px solid #0E0E0E;
-            width: auto;
-        }
-        .main_content .content_image:hover{
-            border: 5px double #ff3900;
-        }
+        
         
 
         .right_side {
             display: grid;
             border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
             grid-row-start: 3;
-            grid-row-end: 10;
+            grid-row-end: 9;
             grid-column-start: 9;
             grid-column-end: 13;
 
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(7, minmax(50px, auto));
+            grid-template-columns: repeat(4, 1fr) ;
+            grid-template-rows: repeat(6, minmax(50px, auto));
         }
         .right_side .content_desc {
             display:flex;
@@ -243,45 +219,24 @@
             grid-column-start: 1;
             grid-column-end: 5;
         }
-        .right_side .student_list .student_list_title{
-            padding:15px 20px 10px 20px;
-            font-family: AppleSDGothicNeoB00;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            line-height: 28px;
-            letter-spacing: 0.01em;
-        }
-        .right_side .student_list .student_list_content{
-            display:grid;
-            padding: 0 10px;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(8,minmax(20px,auto));
-        }
-        .right_side .student_list .student_list_content .student_list_name{
-            padding: 8px;
-            text-align: center;
-        }
-        .right_side .right_side_bottomline{
-            display:grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: minmax(50px,auto);
+        
+        
+        .right_side_bottomline{
+            display:flex;
+            justify-content: space-between;
+            border-top: 0.8px solid rgba(220, 220, 220, 0.8);
 
-            grid-row-start: 7;
-            grid-row-end: 8;
-            grid-column-start: 1;
-            grid-column-end: 5;
+            grid-row-start: 9;
+            grid-row-end: 10;
+            grid-column-start: 9;
+            grid-column-end: 13;
         }
-        .right_side .right_side_bottomline .line_list{
-            display:grid;
-            grid-template-columns: repeat(50, 1fr);
-            grid-template-rows: minmax(50px,auto);
-            border-right: 0.5px solid rgba(220, 220, 220);
-            grid-column-start: 1;
-            grid-column-end: 5;
-        }
-        .right_side .right_side_bottomline .line_list .line{
-            border-right: 1.2px solid rgba(220, 220, 220);
+        .right_side_bottomline .line{
+            display: inline-block;
+            width:1.2px;
+            height: 100%;
+            background-color: rgba(220, 220, 220, 0.8);
+            /* border-right: 1.2px solid #fff; */
         }
         
     </style>
@@ -308,40 +263,17 @@
         </div>
         <div class="speaker"><img id="mouth" src="./icon/mouth_open.svg"></div>
         <div class="main_content">
-            <div class="content_title">융합연계</div>
-            <div class="content_image_list">
-                <img class="content_image" src="./image/image1.png"><img class="content_image" src="./image/image2.png"> <img class="content_image" src="./image/image3.png">
-                <img class="content_image" src="./image/image4.png"><img class="content_image" src="./image/image5.png"> <img class="content_image" src="./image/image6.png">
-                <img class="content_image" src="./image/image7.png"><img class="content_image" src="./image/image8.png"> <img class="content_image" src="./image/image9.png">
-                <img class="content_image" src="./image/image10.png"><img class="content_image" src="./image/image11.png"> <img class="content_image" src="./image/image12.png">
-
-            </div>
+            
         </div>
         <div class="right_side">
-            <div class="content_desc">
-                사용자중심 디자인 원리에 기반하여 인터랙티브 미디어를 구현할 수 있는 실무형 인재 육성을 목표로한다. 모바일앱, 웹, 체감형 콘텐츠를 활용한 인터랙티브 미디어를 구현하기 위해 사용자
-                조사와 분석, UX/UI, 콘텐츠 기획, 2D/3D 그래픽 디자인, 프로그램 개발 과정을 통합적으로 수행할 수 있는 디자이너를 양성한다.
-            </div>
-            <div class="student_list">
-                <div class="student_list_title">참여학생</div>
-                <div class="student_list_content">
-                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
-                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
-                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
-                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
-                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
-                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
-                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
-                </div>
-            </div>
-            <div class="right_side_bottomline">
-                <div class="line_list">
-                    <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div>
-                    <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div>
-                    <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div>
-                    <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div>
-                </div>
-            </div>
+            
+        </div>
+        <div class="right_side_bottomline">
+                
+            <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div>
+            <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div>
+            <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div> <div class="line"></div>
+        
         </div>
     </div>
 </body>
