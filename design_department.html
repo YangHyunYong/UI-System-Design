@@ -203,13 +203,54 @@
         }
         .main_content .content_image{
             display: block;
-            margin: auto;
-            border: 5px solid #1D1D1D;
-            width: auto;
+            width: 95%;
         }
-        .main_content .content_image:hover{
+        .main_content .content_image .content_image_screen{
+            position: relative;
+            padding-bottom: 100%;
+        }
+        .main_content .content_image .content_image_screen img{
+            position: absolute;
+            width: 100%;
+        }
+        .main_content .content_image .content_image_screen span{
+            display:block;
+            position:absolute;
+            background-color: #ff5924;
+            transition: all .4s;
+            z-index: 1;
+        }
+        .main_content .content_image .content_image_screen span:nth-child(1){
+            top:0;
+            height:5px;
+            width: 0;
+        }
+        .main_content .content_image .content_image_screen span:nth-child(2){
+            top:0;
+            right:0;
+            width:5px;
+            height: 0;
+        }
+        .main_content .content_image .content_image_screen span:nth-child(3){
+            bottom:0;
+            right: 0;
+            height:5px;
+            width: 0;
+        }
+        .main_content .content_image .content_image_screen span:nth-child(4){
+            bottom:0;
+            left: 0;
+            width:5px;
+            height: 0;
+        }
+        .content_image:hover .content_image_screen span:nth-child(1) {width:100%;}
+        .content_image:hover .content_image_screen span:nth-child(2) {height:100%;}
+        .content_image:hover .content_image_screen span:nth-child(3) {width:100%;}
+        .content_image:hover .content_image_screen span:nth-child(4) {height:100%;}
+
+        /* .main_content .content_image:hover{
             border: 5px double #FF5924;
-        }
+        } */
         
 
         .right_side {
@@ -309,11 +350,23 @@
         <div class="main_content">
             <div class="content_title">융합연계</div>
             <div class="content_image_list">
-                <img class="content_image" src="./image/image1.png"><img class="content_image" src="./image/image2.png"> <img class="content_image" src="./image/image3.png">
-                <img class="content_image" src="./image/image4.png"><img class="content_image" src="./image/image5.png"> <img class="content_image" src="./image/image6.png">
-                <img class="content_image" src="./image/image7.png"><img class="content_image" src="./image/image8.png"> <img class="content_image" src="./image/image9.png">
-                <img class="content_image" src="./image/image10.png"><img class="content_image" src="./image/image11.png"> <img class="content_image" src="./image/image12.png">
-
+                <div class="content_image">
+                    <div class="content_image_screen">
+                        <span></span><span></span><span></span><span></span>
+                        <img src="https://i.postimg.cc/9MgMR9fs/image1.png">
+                    </div>
+                </div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
             </div>
         </div>
         <div class="right_side">
