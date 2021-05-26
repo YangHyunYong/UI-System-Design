@@ -1,0 +1,700 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.9);
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: #1D1D1D;
+    grid-template-columns: 95px repeat(11, 1fr);
+    grid-template-rows: 60px repeat(7, minmax(50px, auto)) 50px;
+}
+
+.logo {
+    border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+/* .sector {
+    display: grid;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 8;
+    grid-column-end: 9;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.sector #sector_form{
+    border: 3px solid #FF2E00;
+    border-radius: 0 0 0 100px;
+    margin: -10px -10px 10px 0px;
+    width:8vh;
+    height: 8vh;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    
+} */
+
+.left_nav {
+    display: grid;     
+    grid-template-rows: repeat(16, minmax(40px, auto)) ;
+    align-items: center;       
+    text-align: center;
+    border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+    grid-row-start: 2;
+    grid-row-end: 9;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    font-family: KoPubWorldDotum;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+}            
+.left_nav .department{
+    padding:5px;
+    background-color: #FF3900;
+    transform: rotate(270deg);
+
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+.left_nav .department:hover{
+    background-color: #FF3900;
+}
+.left_nav .professor{
+    transform: rotate(270deg);
+    padding:5px;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+.left_nav .professor:hover{
+    background-color: #FF3900;
+}
+.left_nav .student{
+    border: 1.2px solid #FFFFFF;
+    border-radius: 50%;
+    padding:10px;
+    transform: rotate(270deg);
+    grid-row-start: 13;
+    grid-row-end: 14;
+}
+.left_nav .student:hover{
+    background-color: #FF3900;
+}
+
+.left_bottom_space {
+    background-color: #FF5924;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.top_space {
+
+    grid-row-start:1;
+    grid-row-end: 2;
+    grid-column-start:2;
+    grid-column-end:9;
+
+    border-left:1.5px solid #DCDCDC;
+    border-bottom: 1px solid #DCDCDC;
+    border-right: 0.8px solid #DCDCDC;
+ 
+
+    /* border-left: 0.8px solid rgba(220, 220, 220, 0.8);
+    border-right: 0.8px solid rgba(220, 220, 220, 0.8);
+    border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+    
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 13; */
+}
+
+/* 애니매이션 효과 주면 x축 스크롤 생김... */
+.speaker{
+    overflow-x: hidden;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 12;
+    grid-column-end: 13;
+
+    animation-name: shake;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    /* animation-delay: 0.5s; */
+}
+
+@keyframes shake {
+    0%{
+        transform: rotate(10deg);
+      }
+      10%{
+        transform: rotate(-10deg);
+      }
+      20%{
+        transform: rotate(10deg);
+      }
+      30%{
+        transform: rotate(-10deg);
+      }
+      40%{
+        transform: rotate(10deg);
+      }
+      50%{
+        transform: rotate(-10deg);
+      }
+      60%{
+        transform: rotate(10deg);
+      }
+      70%{
+        transform: rotate(-10deg);
+      }
+      100%{
+        transform: rotate(10deg);
+      }
+    
+}
+#mouth {
+    width: 50%;
+    height: 70%;
+}
+
+
+
+/*===  main_content  ============================================*/
+
+.main_content{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.main_content>h2{   
+      
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+    font-family: AppleSDGothicNeoB00;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+#wrap_student{    
+    margin-block-start: 36px;
+    /* margin-block-end: 36px; */
+
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 8;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+
+}
+
+#student_profile{
+
+    display: grid;
+    
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    grid-template-columns: 150px 2fr; /*사진 너비 124px*/
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+.student_detail{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    display: grid;
+    grid-template-columns: 146px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+
+.student_name{
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: grid;
+    grid-template-columns: 82px 1fr;
+}
+
+h3{
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    margin-top: 14px;
+
+    font-family: AppleSDGothicNeoB00;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+}
+
+.detail_icon{
+    margin-top: 18px;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.detail{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.detail_graduate{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.detail>div>span{
+    font-family: KoPubWorldDotum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    
+    color: #B2B2B2;
+}
+
+.detail_good{
+    display: grid;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.student_pic{
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    width: 124px;
+    height: 164px;
+    
+    background-image: url(../image/student_pic.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*==== 하단 comment ==============*/
+
+#student_comment{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+
+    /* display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 158px 1fr; */
+}
+
+.comment_input{
+    margin-top: 32px;
+
+    /* grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2; */
+
+    /* display: grid;
+    grid-template-rows: 74px 76px; */
+}
+
+.comment_col{
+    border: 1px solid #cdcdcd;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 9;
+    overflow:auto;
+}
+
+
+.list_date{  
+    font-size:12px;
+}
+
+.list>div>span{
+    font-size:14px;
+}
+
+ul{
+    list-style: none;
+    margin-top:0;
+    padding-left: 0;
+}
+li{
+    border-bottom: 0.5px solid #9E9E9E;
+    padding-top:15px;
+    padding-left:20px;
+}
+.comment_sender{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    margin-bottom: 0;
+}
+
+.comment_input_place{
+    display: flex;
+    margin-top: 15px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.comment_content{
+    height: 76px;
+    width: 100%;
+}
+
+input{
+    color: #fff;
+
+    outline-style: none;
+    border-radius: 0px 0px;
+    -webkit-appearance: none;
+    
+    background-color:transparent;
+    border: 1px solid #DBDBDB;
+}
+
+.comment_sender_name{
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    margin-left: 5px;
+    width: 122px;
+    height: 24px;
+}
+
+
+/*----얘 왜 안 먹지----*/
+#comment_send{
+
+    width: 40px;
+    height: 40px;
+    
+    background-image: url(../icon/send.svg);
+  
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 1px solid #B0B0B0;
+    box-sizing: border-box;
+
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 7;
+    grid-column-end: 8;
+}
+/*===============================================*/
+
+
+
+.right_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 9;
+    grid-column-end: 13;
+    height: 60px;
+}
+
+.right_nav_content {
+    text-align: center;
+    flex: 1;
+    font-family: AppleSDGothicNeoEB00;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.right_nav_content:first-child{
+    color: #FF3900;
+}
+
+.right_nav_content:hover {
+    color: #FF3900;
+}
+
+.main_content {
+    max-height: 100vh;
+    border-left: 0.8px solid rgba(220, 220, 220, 0.8);
+    border-right: 0.8px solid rgba(220, 220, 220, 0.8);
+    grid-row-start: 2;
+    grid-row-end: 10;
+    grid-column-start: 2;
+    grid-column-end: 9;
+    padding: 0px 30px 0 30px;
+    /* overflow:auto; */
+}
+
+
+.searchbox{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position:relative;
+    grid-column-start:9;
+    grid-column-end:12;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    border-right: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+}    
+#searchbox_line{
+    position: absolute;
+    margin-right:30px;
+    top:40px;
+    right:30px;    
+    width:0;
+    transition: all .3s;
+
+}
+.searchbox #search_icon{
+    width:24px;
+    height:24px;
+    margin-right:30px;
+}
+.searchbox:hover #searchbox_line{
+    width:70%;
+    border: 1px solid #fff;
+}
+
+
+
+#lip{
+    display: grid;
+    grid-column-start:12;
+    grid-column-end:13;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    border-bottom: 1px solid #cdcdcd;
+}
+
+
+
+.middle{
+    border-bottom: 1px solid #cdcdcd;
+    padding: 20px 0;
+    grid-column-start:9;
+    grid-column-end:13;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.middle #initialbox{
+    position: relative;
+    /* border: 1px solid magenta; */
+    text-align: center;
+}
+
+#initialbox>div,span{
+    padding: 0 3px;
+    font-family: 'KoPubWorldDotum';
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    /* border: 1px solid blue; */
+    }
+
+#initialbox>span{
+    color:#343434;
+}
+
+/* 원래는 클릭하면 이렇게 변함 */
+#initialbox>div:hover{
+    background-color: #FF3900;
+    cursor: pointer;
+
+}
+
+
+.right_side{
+    padding-top: 280px;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    overflow-y:scroll;
+    overflow-x: hidden;
+
+    
+    /* border: 1px solid yellow; */
+
+    grid-column-start:9;
+    grid-column-end:13;
+    grid-row-start: 3;
+    grid-row-end: 10;
+}
+
+
+
+
+#nameboxs{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    height: 100%;
+    
+    /* margin-left: 36px; */
+
+}
+
+#nameboxs>.namebox{
+    flex-basis: 76px;
+    width:100%;
+    /* border: 1px solid magenta; */
+}
+
+
+.namebox .name{
+    display:flex;
+    align-content: center;
+    border-bottom: 0.8px solid rgba(112, 112, 112, 0.7);
+    overflow-x: hidden;
+}
+
+.name>h4{
+    /* padding: 36px; */
+    font-family: 'KoPubWorldDotum';
+    font-weight: bold;
+    font-size: 24px;
+    line-height:44px;
+    margin: 24px 36px;
+    opacity: 90%;
+    /* border: 1px solid purple; */
+}
+
+
+.namebox .item{
+    display:flex;
+    margin: 24px 0;   
+    height:100%;
+}
+
+.namebox .item>div{
+    font-family: 'KoPubWorldDotum';
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.right_side_bottomline{
+    display:flex;
+    justify-content: space-between;
+    /* display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(50px ,55px); */
+    border-top: 0.8px solid rgba(220, 220, 220, 0.8);
+
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: 9;
+    grid-column-end: 13;
+    /* position: absolute;
+    bottom: 0;
+    width: 100%; */           
+}
+.right_side_bottomline .line{
+    display: inline-block;
+    width:1.2px;
+    height: 100%;
+    background-color: lavender;
+    /* border-right: 1.2px solid #fff; */
+}

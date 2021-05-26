@@ -1,0 +1,336 @@
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.9);
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: #1D1D1D;
+    grid-template-columns: 95px repeat(11, 1fr);
+    grid-template-rows: 60px repeat(7, minmax(50px, auto)) 50px;
+}
+
+.logo {
+    border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.left_nav {
+    display: grid;     
+    grid-template-rows: repeat(16, minmax(40px, auto)) ;
+    align-items: center;       
+    text-align: center;
+    grid-row-start: 2;
+    grid-row-end: 9;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    font-family: KoPubWorldDotum;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+}            
+.left_nav .department{
+    padding:5px;
+    background-color: #FF5924;
+    transform: rotate(270deg);
+
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+.left_nav .department:hover{
+    background-color: #FF5924;
+}
+.left_nav .professor{
+    transform: rotate(270deg);
+    padding:5px;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+.left_nav .professor:hover{
+    background-color: #FF5924;
+}
+.left_nav .student{
+    border: 1.2px solid #FFFFFF;
+    border-radius: 50%;
+    padding:10px;
+    transform: rotate(270deg);
+    grid-row-start: 13;
+    grid-row-end: 14;
+}
+.left_nav .student:hover{
+    background-color: #FF5924;
+}
+
+.left_bottom_space {
+    border-top: 1.2px solid #DCDCDC;
+    background-color: #FF5924;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.top_space {
+    border-left: 1.5px solid #DCDCDC;
+    border-bottom: 1px solid rgba(220, 220, 220, 0.7);
+    
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 13;
+}
+.speaker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #DCDCDC;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 12;
+    grid-column-end: 13;
+}
+#mouth {
+    height: 50%;
+    width:70%;
+}
+
+.right_nav {
+    display: flex;
+    align-items: center;
+    border-bottom: 1.2px solid #DCDCDC;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 9;
+    grid-column-end: 13;
+    height: 60px;
+}
+
+.right_nav_content {
+    padding-left:25px;
+    font-family: AppleSDGothicNeoEB00;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.right_nav_content_name{
+    padding-left: 35px;
+    font-family: KoPubWorldDotum;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 31px;
+    color: #FF5924;
+}
+
+.right_nav_content .right_nav_content_name{
+    color: #FF5924;
+}
+
+.main_content {
+    max-height: 100vh;
+    border-left: 1.5px solid #DCDCDC;
+    border-right: 0.8px solid rgba(220, 220, 220, 0.8);
+
+    grid-row-start: 2;
+    grid-row-end: 10;
+    grid-column-start: 2;
+    grid-column-end: 9;
+    overflow:auto;
+}
+
+.main_content .main_content_detail .professor_interview_title{
+    font-family: AppleSDGothicNeoB00;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 39px;
+    letter-spacing: 0.01em;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-top: 40px;
+    padding-left:40px;
+}
+.main_content .main_content_detail .professor_interview{
+    border: 1px solid #fff;
+    margin: auto;
+    width:490px;
+    height: 270px;
+}
+.main_content .main_content_detail .professor_info{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width:620px;
+    margin-bottom:10px;
+}
+.main_content .main_content_detail .professor_info .professor_position{
+    font-family: AppleSDGothicNeoL00;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    color: #ECECEC;
+    padding-right:5px;
+} 
+.main_content .main_content_detail .professor_info .professor_name{
+    font-family: AppleSDGothicNeoB00;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: right;
+    color: #ECECEC;
+} 
+.main_content .main_content_detail .question_sub{
+    margin-top:15px;
+    text-align: center;
+    font-family: KoPubWorldDotum;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #A4A4A4;
+}
+.main_content .main_content_detail .question_title{
+    margin-top:-5px;
+    text-align: center;
+    font-family: AppleSDGothicNeoB00;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 39px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.main_content .main_content_detail .question_area{
+    margin-top:30px;
+    border-top: 0.5px solid #FFFFFF;
+}
+.main_content .main_content_detail .question_area .question{
+    display:flex;
+    margin: 30px 90px 0 90px;
+}
+.main_content .main_content_detail .question_area .answer{
+    display: flex;
+    margin: 10px 90px 0 90px;
+}
+.main_content .main_content_detail .question_area .num{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-right: 5px;
+}
+.main_content .main_content_detail .question_area .content{
+    padding-top:3px;
+    font-family: KoPubWorldDotum;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #F3F3F3;
+}
+
+.right_side {
+    display: grid;
+    grid-row-start: 3;
+    grid-row-end: 9;
+    grid-column-start: 9;
+    grid-column-end: 13;
+
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: repeat(7, minmax(50px, auto));
+}
+.right_side .media_professor{
+    border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.right_side .media_professor .media_professor_list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(2, minmax(50px, auto));
+    padding-top:35px;
+}
+
+.right_side .industry_professor{
+    grid-row-start: 4;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    padding-top: 25px;
+}
+.right_side .industry_professor .industry_professor_list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(3, minmax(50px, auto));
+    padding-top:35px;
+
+}
+.right_side .department_title{
+    font-family: AppleSDGothicNeoB00;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 31px;
+    color: #FFFFFF;
+    padding-left:25px;
+}
+.right_side .media_professor .media_professor_name{
+    font-family: KoPubWorldDotum;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #B0B0B0;
+}
+.right_side .industry_professor .industry_professor_name{
+    font-family: KoPubWorldDotum;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #B0B0B0;
+}
+
+.right_side_bottomline{
+    display:flex;
+    justify-content: space-between;
+    border-top: 1.2px solid #DCDCDC;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: 9;
+    grid-column-end: 13;
+}
+.right_side_bottomline .line{
+    display: inline-block;
+    width:1.2px;
+    height: 100%;
+    background-color: rgba(220, 220, 220, 0.8);
+}
