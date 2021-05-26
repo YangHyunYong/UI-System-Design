@@ -46,7 +46,6 @@ body {
 }            
 .left_nav .department{
     padding:5px;
-    background-color: #FF5924;
     transform: rotate(270deg);
 
     grid-row-start: 3;
@@ -56,6 +55,7 @@ body {
     background-color: #FF5924;
 }
 .left_nav .professor{
+    background-color: #FF5924;
     transform: rotate(270deg);
     padding:5px;
     grid-row-start: 7;
