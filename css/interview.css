@@ -12,6 +12,11 @@ body {
     display: none;
 }
 
+a{
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
 .container {
     display: grid;
     width: 100%;
@@ -22,6 +27,9 @@ body {
 }
 
 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
     grid-row-start: 1;
     grid-row-end: 2;

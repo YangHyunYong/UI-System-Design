@@ -7,18 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shh_student</title>
     <link rel="stylesheet" type="text/css" href="css/student.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="./js/student_list_move.js"></script>
+
+    <script>
+        function move(seq){
+            var h = (seq-1)*94 + 10;
+            $('.right_side').stop().animate({scrollTop : h}, 400);
+        }
+    </script>
 </head>
 
 <body>
     <div class="container">
-        <div class="logo"></div>
+        <div class="logo"><a href="./index.html"><img src="./icon/main_logo.svg"></a></div>
         <div class="sector">
             <div id="sector_form"></div>
         </div>
         <div class="left_nav">
-            <div class="department">디자인 학부</div>
-            <div class="professor">교수 인터뷰</div>
-            <div class="student">학생</div>
+            <div class="department"><a href="./map(absolute).html">디자인 학부</a></div>
+            <div class="professor"><a href="./interview.html">교수 인터뷰</a></div>
+            <div class="student"><a href="./student.html">학생</a></div>
         </div>
         <div class="left_bottom_space"></div>
 
@@ -26,27 +35,27 @@
         </div>
 
         <div class="searchbox">
-            <div id="searchbox_line"></div>
+            <input id="searchbox_line">
             <img id="search_icon" src="./icon/search.svg">
         </div>
         <div id="lip"></div>
 
         <div class="middle">
             <div id="initialbox">
-                <div>ㄱ</div>
-                <div>ㄴ</div>
-                <div>ㄷ</div>
+                <button onclick="move('1')">ㄱ</button>
+                <button onclick="move('2')">ㄴ</button>
+                <button onclick="move('3')">ㄷ</button>
                 <span>ㄹ</span>
-                <div>ㅁ</div>
-                <div>ㅂ</div>
-                <div>ㅅ</div>
-                <div>ㅇ</div>
-                <div>ㅈ</div>
-                <div>ㅊ</div>
+                <button onclick="move('4')">ㅁ</button>
+                <button onclick="move('5')">ㅂ</button>
+                <button onclick="move('6')">ㅅ</button>
+                <button onclick="move('7')">ㅇ</button>
+                <button onclick="move('8')">ㅈ</button>
+                <button onclick="move('9')">ㅊ</button>
                 <span>ㅋ</span>
                 <span>ㅌ</span>
-                <div>ㅍ</div>
-                <div>ㅎ</div>
+                <span>ㅍ</span>
+                <span>ㅎ</span>
             </div>                
         </div>
         
@@ -58,7 +67,7 @@
         
         <div class="main_content">
             <h2>학생</h2>
-            <div id="comment_send"></div>
+            <div id="comment_send"> <img id="send" src="./icon/send.svg" onmouseover="this.src='./icon/send_hover.svg'" onmouseout="this.src='./icon/send.svg'"></div>
             <div id="wrap_student">
                 <div id="student_profile">
                     <div class="student_pic"></div>
@@ -66,9 +75,9 @@
                         <div class="student_name">
                             <h3>나인권</h3>
                             <div class="detail_icon">
-                                <img src="./icon/instagram.svg">
-                                <img src="./icon/facebook.svg">
-                                <img src="./icon/gmail.svg">
+                                <img src="./icon/instagram.svg" onmouseover="this.src='./icon/instagram_hover.svg'" onmouseout="this.src='./icon/instagram.svg'">
+                                <img src="./icon/facebook.svg" onmouseover="this.src='./icon/facebook_hover.svg'" onmouseout="this.src='./icon/facebook.svg'">
+                                <img src="./icon/gmail.svg" onmouseover="this.src='./icon/gmail_hover.svg'" onmouseout="this.src='./icon/gmail.svg'">
                             </div>
                         </div>
                         <div class="detail">
@@ -139,7 +148,7 @@
             <div class="line"></div>
             <div id="nameboxs">
                 <div class="namebox">
-                    <div class="name">                        
+                    <div class="name" id="initial1">                        
                         <h4>ㄱ</h4>
                         <div class="item">
                             <div>김지현</div><div>고은영</div><div>강인한</div><div>구리시</div>
@@ -147,7 +156,7 @@
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name">
+                    <div class="name" id="initial2">
                         <h4>ㄴ</h4>
                         <div class="item">
                             <div>나우리</div><div>남인철</div><div>남동구</div><div>너구리</div>
@@ -155,7 +164,7 @@
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name">
+                    <div class="name" id="initial3">
                         <h4>ㄷ</h4>
                         <div class="item">
                             <div>동대문</div><div>동대문</div><div>동대문</div><div>동대문</div>
@@ -163,7 +172,7 @@
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name">
+                    <div class="name" id="initial4">
                         <h4>ㅁ</h4>
                         <div class="item">
                             <div>마동석</div><div>마동석</div><div>마동석</div>
@@ -171,7 +180,7 @@
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name">
+                    <div class="name" id="initial5">
                         <h4>ㅂ</h4>
                         <div class="item">
                             <div>박신양</div><div>박신양</div><div>박신양</div><div>박신양</div>
@@ -179,7 +188,7 @@
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name">
+                    <div class="name" id="initial6">
                         <h4>ㅅ</h4>
                         <div class="item">
                             <div>신세경</div><div>신세경</div><div>신세경</div>
@@ -187,7 +196,7 @@
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name">
+                    <div class="name" id="initial7">
                         <h4>ㅇ</h4>
                         <div class="item">
                             <div>이승철</div><div>이승철</div><div>이승철</div><div>이승철</div>
@@ -195,7 +204,7 @@
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name">
+                    <div class="name" id="initial8">
                         <h4>ㅈ</h4>
                         <div class="item">
                             <div>정인</div><div>정인</div><div>정인</div>
@@ -203,7 +212,7 @@
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name">
+                    <div class="name" id="initial9">
                         <h4>ㅊ</h4>
                         <div class="item">
                             <div>차인표</div><div>차인표</div><div>차인표</div><div>차인표</div>

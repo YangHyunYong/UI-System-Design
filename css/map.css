@@ -12,6 +12,11 @@ body {
     display: none;
 }
 
+a{
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
 .container {
     display: grid;
     width: 100%;
@@ -22,11 +27,14 @@ body {
 }
 
 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-bottom: 1px solid rgba(220, 220, 220, 0.7);
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
-    grid-column-end: 1;
+    grid-column-end: 1;    
 }
 
 .sector {
@@ -66,10 +74,10 @@ body {
     line-height: 18px;
 }            
 .left_nav .department{
-    padding:5px;
+    padding: 5px;
     background-color: #FF5924;
     transform: rotate(270deg);
-
+    border-radius: 2px;
     grid-row-start: 3;
     grid-row-end: 5;
 }
@@ -228,12 +236,15 @@ body {
 }
 .area1_first:hover{
     background-color: #FF5924;
+    border-radius: 4px;
 }
 .area1_second:hover{
     background-color: #FF5924;
+    border-radius: 4px;
 }
 .area1_third:hover{
     background-color: #FF5924;
+    border-radius: 4px;
 }
 .main_content .content_detail .department2{
     position: relative;
@@ -277,12 +288,15 @@ body {
 }
 .area2_first:hover{
     background-color: #FF5924;
+    border-radius: 4px;
 }
 .area2_second:hover{
     background-color: #FF5924;
+    border-radius: 4px;
 }
 .area2_third:hover{
     background-color: #FF5924;
+    border-radius: 4px;
 }
 .area_text{
     position:absolute;
@@ -336,4 +350,38 @@ body {
     grid-row-end: 10;
     grid-column-start: 2;
     grid-column-end: 13;     
+}
+
+.bottom_space{
+    border-top: 1.2px solid #dcdcdc;
+
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: 2;
+    grid-column-end: 13;
+
+    display: grid;
+    grid-template-columns: 1fr 122px;
+}
+
+.container_info .bottom_line{
+    background-color: #1d1d1d;
+}
+
+.bottom_line{
+    overflow: hidden;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    z-index: 11;
+}
+
+.bottom_line>div{
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    background-color: #FFFFFF;
+    bottom: 0;
+    margin-left: 14px;
 }

@@ -10,6 +10,11 @@ body {
     display: none;
 }
 
+a{
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
 .container {
     display: grid;
     width: 100%;
@@ -20,33 +25,15 @@ body {
 }
 
 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 1;
 }
-
-/* .sector {
-    display: grid;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 8;
-    grid-column-end: 9;
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-}
-.sector #sector_form{
-    border: 3px solid #FF2E00;
-    border-radius: 0 0 0 100px;
-    margin: -10px -10px 10px 0px;
-    width:8vh;
-    height: 8vh;
-    grid-column-start: 3;
-    grid-column-end: 3;
-    
-} */
 
 .left_nav {
     display: grid;     
@@ -114,16 +101,6 @@ body {
     border-left:1.5px solid #DCDCDC;
     border-bottom: 1px solid #DCDCDC;
     border-right: 0.8px solid #DCDCDC;
- 
-
-    /* border-left: 0.8px solid rgba(220, 220, 220, 0.8);
-    border-right: 0.8px solid rgba(220, 220, 220, 0.8);
-    border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
-    
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 13; */
 }
 
 /* 애니매이션 효과 주면 x축 스크롤 생김... */
@@ -134,9 +111,9 @@ body {
     grid-column-start: 12;
     grid-column-end: 13;
 
-    animation-name: shake;
+    /* animation-name: shake;
     animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
     /* animation-delay: 0.5s; */
 }
 
@@ -435,12 +412,12 @@ input{
 
 /*----얘 왜 안 먹지----*/
 #comment_send{
-
+    display:flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
     
-    background-image: url(../icon/send.svg);
-  
     background-position: center;
     background-repeat: no-repeat;
 
@@ -451,6 +428,10 @@ input{
     grid-row-end: 5;
     grid-column-start: 7;
     grid-column-end: 8;
+}
+#send{
+    width: 28px;
+    height: 28px;
 }
 /*===============================================*/
 
@@ -516,11 +497,12 @@ input{
 #searchbox_line{
     position: absolute;
     margin-right:30px;
-    top:40px;
+    top:15px;
     right:30px;    
     width:0;
+    height: 24px;
     transition: all .3s;
-
+    border: none;
 }
 .searchbox #search_icon{
     width:24px;
@@ -529,9 +511,12 @@ input{
 }
 .searchbox:hover #searchbox_line{
     width:70%;
-    border: 1px solid #fff;
+    border-bottom: 1px solid #cdcdcd;
 }
-
+.searchbox #searchbox_line:focus{
+    width:70%;
+    border-bottom: 1px solid #cdcdcd;
+}
 
 
 #lip{
@@ -561,12 +546,16 @@ input{
     text-align: center;
 }
 
-#initialbox>div,span{
+#initialbox>div,span,button{
     padding: 0 3px;
     font-family: 'KoPubWorldDotum';
     font-weight: bold;
     font-size: 20px;
     display: inline-block;
+    background-color:#1d1d1d;
+    color: rgba(255, 255, 255, 0.9);
+    border:0;
+    outline:0;
     /* border: 1px solid blue; */
     }
 
@@ -575,12 +564,14 @@ input{
 }
 
 /* 원래는 클릭하면 이렇게 변함 */
-#initialbox>div:hover{
+/* #initialbox>div:hover{
     background-color: #FF3900;
     cursor: pointer;
-
+} */
+#initialbox>button:hover{
+    background-color: #FF3900;
+    cursor: pointer;
 }
-
 
 .right_side{
     padding-top: 280px;
@@ -652,38 +643,6 @@ input{
     font-size: 16px;
     padding: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .right_side_bottomline{
     display:flex;

@@ -7,18 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shh_select</title>
     <link rel="stylesheet" type="text/css" href="css/select.css">
+    <script type="text/javascript" src="./js/show_student_list.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="logo"></div>
+        <div class="logo"><a href="./index.html"><img src="./icon/main_logo.svg"></a></div>
         <div class="sector">
             <div id="sector_form"></div>
         </div>
         <div class="left_nav">
-            <div class="department">디자인 학부</div>
-            <div class="professor">교수 인터뷰</div>
-            <div class="student">학생</div>
+            <div class="department"><a href="./map(absolute).html">디자인 학부</a></div>
+            <div class="professor" id="first"><a href="./interview.html">교수 인터뷰</a></div>
+            <div class="student" id="second"><a href="./student.html">학생</a></div>
         </div>
         <div class="left_bottom_space"></div>
         <div class="right_nav">
@@ -31,23 +32,28 @@
         <div class="main_content">
             <div class="content_title">융합연계</div>
             <div class="content_image_list">
-                <div class="content_image">
+                <div class="content_image" id="first_img">
                     <div class="content_image_screen">
                         <span></span><span></span><span></span><span></span>
                         <img src="https://i.postimg.cc/9MgMR9fs/image1.png">
+                        <a href="./select_detail.html">
+                            <div class="img_cover">
+                                <div class="img_title">DALLI</div>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
-                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
-                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
-                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
-                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
-                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
-                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
-                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
-                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
-                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
-                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"></div></div>
+                <div class="content_image" id="second_img"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"><div class="img_cover"><div class="img_title">DALLI</div></div></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"><div class="img_cover"><div class="img_title">DALLI</div></div></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"><div class="img_cover"><div class="img_title">DALLI</div></div></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"><div class="img_cover"><div class="img_title">DALLI</div></div></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"><div class="img_cover"><div class="img_title">DALLI</div></div></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"><div class="img_cover"><div class="img_title">DALLI</div></div></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"><div class="img_cover"><div class="img_title">DALLI</div></div></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"><div class="img_cover"><div class="img_title">DALLI</div></div></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"><div class="img_cover"><div class="img_title">DALLI</div></div></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"><div class="img_cover"><div class="img_title">DALLI</div></div></div></div>
+                <div class="content_image"><div class="content_image_screen"><span></span><span></span><span></span><span></span><img src="https://i.postimg.cc/9MgMR9fs/image1.png"><div class="img_cover"><div class="img_title">DALLI</div></div></div></div>
             </div>
         </div>
         <div class="right_side">
@@ -58,13 +64,13 @@
             <div class="student_list">
                 <div class="student_list_title">참여학생</div>
                 <div class="student_list_content">
+                    <div class="student_list_name" id="first_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name" id="sixth_name">양현용</div>
                     <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
+                    <div class="student_list_name" id="fourth_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
+                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name" id="second_name">양현용</div> <div class="student_list_name">양현용</div>
                     <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
-                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
-                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
-                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
-                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
-                    <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
+                    <div class="student_list_name"id="fifth_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
+                    <div class="student_list_name">양현용</div> <div class="student_list_name" id="third_name">양현용</div> <div class="student_list_name">양현용</div> <div class="student_list_name">양현용</div>
                 </div>
             </div>
         </div>

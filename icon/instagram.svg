@@ -1,12 +1,12 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="#D6D6D6"/>
+<rect x="2.5" y="2.5" width="19" height="19" rx="1.5" stroke="#D6D6D6"/>
 <g clip-path="url(#clip0)">
-<circle cx="12.0605" cy="12.793" r="4" stroke="white" stroke-width="1.2"/>
-<circle cx="16.5605" cy="7.29297" r="0.5" stroke="white" stroke-width="1.2"/>
+<circle cx="12.0607" cy="12.7949" r="4" stroke="white" stroke-width="1.2"/>
+<circle cx="16.5607" cy="7.29492" r="0.5" stroke="white" stroke-width="1.2"/>
 </g>
 <defs>
 <clipPath id="clip0">
-<rect width="12.8571" height="13.5714" fill="white" transform="translate(4.83691 5.57031)"/>
+<rect width="12.8571" height="13.5714" fill="white" transform="translate(4.83704 5.57129)"/>
 </clipPath>
 </defs>
 </svg>

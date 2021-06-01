@@ -12,6 +12,11 @@ body {
     display: none;
 }
 
+a{
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
 .container {
     display: grid;
     width: 100%;
@@ -22,6 +27,9 @@ body {
 }
 
 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
     grid-row-start: 1;
     grid-row-end: 2;
@@ -208,8 +216,14 @@ body {
     transition: all .4s;
     z-index: 1;
 }
+/* .main_content .content_image .content_image_screen img:hover{
+    background-color:rgba(255, 255, 255, 0.9);
+    width:100%;
+    height: 100%;
+} */
 .main_content .content_image .content_image_screen span:nth-child(1){
     top:0;
+    left:0;
     height:10px;
     width: 0;
 }
@@ -231,14 +245,39 @@ body {
     width:10px;
     height: 0;
 }
+.main_content .content_image .content_image_screen .img_cover{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+.main_content .content_image .content_image_screen .img_cover .img_title{
+    opacity: 0;
+    font-family: AppleSDGothicNeoB00;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    margin:10px 0;
+    padding: 10px 0;
+}
+
 .content_image:hover .content_image_screen span:nth-child(1) {width:100%;}
 .content_image:hover .content_image_screen span:nth-child(2) {height:100%;}
 .content_image:hover .content_image_screen span:nth-child(3) {width:100%;}
 .content_image:hover .content_image_screen span:nth-child(4) {height:100%;}
-
-/* .main_content .content_image:hover{
-    border: 5px double #FF5924;
-} */
+.content_image:hover .content_image_screen .img_cover {
+    width:100%; 
+    height:100%;    
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.content_image:hover .content_image_screen .img_cover .img_title{
+    opacity: 1;
+}
 
 
 .right_side {
@@ -253,11 +292,10 @@ body {
 }
 .right_side .content_desc {
     display:flex;
-    padding: 10px 20px 15px 20px;
+    padding: 15px 35px 10px 35px;
     /* 934px 기준으로 grid칸이 안맞음 */
     font-family: KoPubWorldDotum;
-    font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 1.8vh;
     line-height: 22px;
     text-align: left;

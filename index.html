@@ -5,33 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
     <!-- <link rel="stylesheet" type="text/css" href="css/form.css"> -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    
     <title>Shhhh..</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="logo"></div>
+        <div class="logo"><a href="./index.html"><img src="./icon/main_logo.svg"></a></div>
         <div class="sector">
             <div id="sector_form"></div>
         </div>
+        <div class="cursor"><img id="par_next" src="./icon/par_next.svg"></div>
+        <div class="mouth_text"><img id="mouth_img" src="image/main_apb/scroll_text.svg"></div>
+        <div class="finger_text"><img src="image/main_apb/click_text.svg"></div>
+        <div class="down_arrow"><img src="icon/down_arrow2.svg"></div>
 
         <div class="left_nav">
-            <div class="department">디자인 학부</div>
-            <div class="professor">교수 인터뷰</div>
-            <div class="student">학생</div>
+            <div class="department"><a href="./map(absolute).html">디자인 학부</a></div>
+            <div class="professor"><a href="./interview.html">교수 인터뷰</a></div>
+            <div class="student"><a href="./student.html">학생</a></div>
         </div>
         <div class="left_bottom_space"></div>
         
         <div class="top_space"></div>
         <div class="speaker"><img id="mouth" src="./icon/mouth_new.svg"></div>
-        
+
         <div class="main_content">
-            <div class="main_par">
-                <h3>전시소개</h3>
+            <div class="main_par_first">
+                <div class="concept_text">Shhh...</div>
                 <p>사용자중심 디자인 원리에 기반하여 인터랙티브 미디어를 구현할 수 있는 실무형 인재 육성을 목표로한다. 모바일앱, 웹, 체감형 콘텐츠를 활용한 인터랙티브 미디어를 구현하기 위해 사용자 조사와 분석, UX/UI, 콘텐츠 기획, 2D/3D 그래픽 디자인, 프로그램 개발 과정을 통합적으로
                     <br><br>
                     사용자중심 디자인 원리에 기반하여 인터랙티브 미디어를 구현할 수 있는 실무형 인재 육성을 목표로한다. 모바일앱, 웹, 체감형 콘텐츠를 활용한 인터랙티브 미디어를 구현하기 위해 사용자 조사와 분석, UX/UI, 콘텐츠 기획, 2D/3D 그래픽 디자인, 프로그램 개발 과정을 통합적으로 수행할 수 있는 
@@ -91,28 +95,44 @@
 
 
     <div class="container_info">
-        <div class="logo"></div>
+        <div class="logo"><a href="./index.html"><img src="./icon/main_logo.svg"></a></div>
         <div class="sector">
             <div id="sector_form"></div>
         </div>
 
         <div class="left_nav">
-            <div class="department">디자인 학부</div>
-            <div class="professor">교수 인터뷰</div>
-            <div class="student">학생</div>
+            <div class="department"><a href="./map(absolute).html">디자인 학부</a></div>
+            <div class="professor"><a href="./interview.html">교수 인터뷰</a></div>
+            <div class="student"><a href="./student.html">학생</a></div>
         </div>
         <div class="left_bottom_space"></div>
         
         <div class="top_space"></div>
+        <div class="speaker2"><img id="mouth2" src="./icon/mouth_talking1.svg"></div>
+        <div class="speaker3"><img id="mouth3" src="./icon/mouth_talking2.svg"></div>
         <div class="speaker"><img id="mouth" src="./icon/mouth_new.svg"></div>
-        
+
+        <div id="pop"><img id="pop_img" src="./image/main_apb/pop.svg"></div>
         <div class="main_content">
-            <div class="main_par">
-                <h3>전시소개</h3>
-                <p>사용자중심 디자인 원리에 기반하여 인터랙티브 미디어를 구현할 수 있는 실무형 인재 육성을 목표로한다. 모바일앱, 웹, 체감형 콘텐츠를 활용한 인터랙티브 미디어를 구현하기 위해 사용자 조사와 분석, UX/UI, 콘텐츠 기획, 2D/3D 그래픽 디자인, 프로그램 개발 과정을 통합적으로
-                    <br><br>
-                    사용자중심 디자인 원리에 기반하여 인터랙티브 미디어를 구현할 수 있는 실무형 인재 육성을 목표로한다. 모바일앱, 웹, 체감형 콘텐츠를 활용한 인터랙티브 미디어를 구현하기 위해 사용자 조사와 분석, UX/UI, 콘텐츠 기획, 2D/3D 그래픽 디자인, 프로그램 개발 과정을 통합적으로 수행할 수 있는 
-                </p>
+            <div class="main_par_second">
+                <br>
+                <div class="second_professor">
+                    <h3>교수진</h3>
+                    <p>김 억, 구기설 신상영 장영주 권오재 이문환 조남주</p><br>
+                </div>
+                <div class="second_student">
+                    <h3>참여학생</h3>
+                    <p>김지현 고은영 강인한 나우리 남인철 남동구 동대문 마동석 박가연 박신양 신세경 김지현 고은영 강인한 나우리 남인철 남동구 동대문 마동석 박가연 박신양 신세경 김지현 고은영 강인한 나우리 남인철
+                        남동구 동대문 마동석 박가연 박신양 신세경 김지현 고은영 강인한 나우리 남인철 남동구 동대문 마동석 박가연 박신양 신세경 김지현 고은영 강인한 나우리 남인철 남동구 동대문 마동석 박가연 박신양
+                        신세경 김지현 고은영 강인한 나우리 남인철 남동구 동대문 마동석 박가연 박신양 신세경 김지현 고은영 강인한 나우리 남인철 남동구 동대문 마동석 박가연 박신양 신세경 김지현 고은영 강인한 나우리
+                        남인철 남동구 동대문 마동석 박가연 박신양 신세경 김지현 고은영 강인한 나우리 남인철 남동구 동대문 마동석 박가연 박신양 신세경
+                    </p><br>
+                </div>
+                <div class="second_graduation">
+                    <h3>졸업준비 위원회</h3>
+                    <p>김지현 고은영 강인한 나우리 남인철 남동구 동대문 마동석 박가연 박신양 신세경 양현용 음선미                       
+                    </p>
+                </div>
             </div>
 
             <!--apb-->
