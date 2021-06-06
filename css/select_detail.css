@@ -103,11 +103,10 @@ a{
 .top_space {
     border-left: 0.8px solid rgba(220, 220, 220, 0.8);
     border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
-    border-right: 0.8px solid rgba(220, 220, 220, 0.8);
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
-    grid-column-end: 12;
+    grid-column-end: 13;
 }
 .speaker{
     display: flex;
@@ -128,6 +127,7 @@ a{
 }
 .speaker3{
     text-align: center;
+    border-left: 0.8px solid rgba(220, 220, 220, 0.8);
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 12;
