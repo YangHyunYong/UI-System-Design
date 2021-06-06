@@ -40,6 +40,9 @@ a{
 #mouth {
     height: 70%;
     width: 50%;
+    animation-name: open_mouth;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
 }
 .mouth_text{
     margin-left:-160px;
@@ -143,7 +146,6 @@ a{
 .top_space {
     border-left: 0.8px solid rgba(220, 220, 220, 0.8);
     border-bottom: 0.8px solid rgba(220, 220, 220, 0.8);
-    border-right: 0.8px solid rgba(220, 220, 220, 0.8);
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
@@ -168,14 +170,40 @@ a{
     grid-column-end: 13;
 }
 .speaker3{
+    border-bottom: 1px solid rgba(220, 220, 220, 0.7);
+    border-left: 0.8px solid rgba(220, 220, 220, 0.8);
+
     text-align: center;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 12;
     grid-column-end: 13;
 }
-/* ..? */
-#mouth2{
+.container #mouth2{
+    margin-bottom:-50px;
+    height: 70%;
+    width: 50%;
+    animation-name: close_mouth;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+.container #mouth2{
+    height:100%;
+}
+.container #mouth3{
+    margin-top:-10px;
+    height: 70%;
+    width: 50%;
+    animation-name: open_mouth;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+.container #mouth3{
+    height: 100%;
+}
+
+
+.container_info #mouth2{
     margin-bottom:-50px;
     height: 70%;
     width: 50%;
@@ -184,10 +212,10 @@ a{
     animation-iteration-count: infinite;
     opacity: 0;
 }
-#mouth2{
+.container_info #mouth2{
     height:100%;
 }
-#mouth3{
+.container_info #mouth3{
     margin-top:-10px;
     height: 70%;
     width: 50%;
@@ -196,7 +224,7 @@ a{
     animation-iteration-count: infinite;
     opacity: 0;
 }
-#mouth3{
+.container_info #mouth3{
     height: 100%;
 }
 
@@ -274,7 +302,6 @@ a{
 .main_content {
     max-height: 100vh;
     border-left: 0.8px solid rgba(220, 220, 220, 0.8);
-    border-right: 0.8px solid rgba(220, 220, 220, 0.8);
     grid-row-start: 2;
     grid-row-end: 10;
     grid-column-start: 2;
@@ -595,12 +622,12 @@ p {
 
 
 .right_side {
-    border-top: 1px solid rgba(220, 220, 220, 0.7);
     display: grid;
     grid-row-start: 2;
-    grid-row-end: 9;
+    grid-row-end: 10;
     grid-column-start: 12;
     grid-column-end: 13;
+    border-left: 0.8px solid rgba(220, 220, 220, 0.8);
 
 }
 .right_side .content_desc {

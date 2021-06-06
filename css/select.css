@@ -22,7 +22,7 @@ a{
     width: 100%;
     height: 100%;
     background-color: #1D1D1D;
-    grid-template-columns: 95px repeat(11, 1fr);
+    grid-template-columns: 95px repeat(10, 1fr) 122px;
     grid-template-rows: 60px repeat(7, minmax(50px, auto)) 50px;
 }
 

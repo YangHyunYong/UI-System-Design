@@ -22,7 +22,7 @@ a{
     width: 100%;
     height: 100%;
     background-color: #1D1D1D;
-    grid-template-columns: 95px repeat(11, 1fr);
+    grid-template-columns: 95px repeat(10, 1fr) 122px;
     grid-template-rows: 60px repeat(7, minmax(50px, auto)) 50px;
 }
 
@@ -109,16 +109,55 @@ a{
     grid-column-start: 2;
     grid-column-end: 13;
 }
-.speaker{
+/* .speaker{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: 1px solid #DCDCDC;
+    border-left: 0.8px solid rgba(220, 220, 220, 0.8);
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 12;
+    grid-column-end: 13;
+} */
+.speaker2{
+    text-align: center;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 12;
     grid-column-end: 13;
 }
+.speaker3{
+    text-align: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 12;
+    grid-column-end: 13;
+    border-left: 0.8px solid rgba(220, 220, 220, 0.8);
+
+}
+.container #mouth2{
+    margin-bottom:-50px;
+    height: 70%;
+    width: 50%;
+    animation-name: close_mouth;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+.container #mouth2{
+    height:100%;
+}
+.container #mouth3{
+    margin-top:-10px;
+    height: 70%;
+    width: 50%;
+    animation-name: open_mouth;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+.container #mouth3{
+    height: 100%;
+}
+
 #mouth {
     height: 50%;
     width:70%;
@@ -172,6 +211,10 @@ a{
 }
 
 .main_content .main_content_detail .professor_interview_title{
+    display: block;
+    margin: 40px 60px 0 60px;
+    height: 6%;
+
     font-family: AppleSDGothicNeoB00;
     font-style: normal;
     font-weight: normal;
@@ -180,9 +223,8 @@ a{
     letter-spacing: 0.01em;
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding-top: 40px;
-    padding-left:40px;
 }
+
 .main_content .main_content_detail .professor_interview{
     border: 1px solid #fff;
     margin: auto;
@@ -194,7 +236,8 @@ a{
     justify-content: flex-end;
     position: relative;
     align-items: center;
-    margin:10px;
+    width: 490px;
+    margin:auto;
     height: 25px;
 }
 .main_content .main_content_detail .professor_info .professor_position{
@@ -205,9 +248,7 @@ a{
     line-height: 20px;
     text-align: right;
     color: #ECECEC;
-    padding-right:5px;
-    position: absolute;
-    right:180px;
+    padding-right:8px;
 } 
 .main_content .main_content_detail .professor_info .professor_name{
     font-family: AppleSDGothicNeoB00;
@@ -217,8 +258,7 @@ a{
     line-height: 22px;
     text-align: right;
     color: #ECECEC;
-    position: absolute;
-    right:105px;
+
 } 
 .main_content .main_content_detail .question_sub{
     margin-top:15px;
@@ -353,4 +393,21 @@ a{
     width:1.2px;
     height: 100%;
     background-color: rgba(220, 220, 220, 0.8);
+}
+
+@keyframes open_mouth{
+    10%{transform: translate(0, -2px);}
+    20%{transform: translate(0, 2px);}
+    40%{transform: translate(0, -2px);}
+    60%{transform: translate(0, 2px);}
+    80%{transform: translate(0, -2px);}
+    100%{transform: translate(0, 2px);}
+}
+@keyframes close_mouth{
+    10%{transform: translate(0, 2px);}
+    20%{transform: translate(0, -2px);}
+    40%{transform: translate(0, 2px);}
+    60%{transform: translate(0, -2px);}
+    80%{transform: translate(0, 2px);}
+    100%{transform: translate(0, -2px);}
 }

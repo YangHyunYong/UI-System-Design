@@ -20,7 +20,7 @@ a{
     width: 100%;
     height: 100%;
     background-color: #1D1D1D;
-    grid-template-columns: 95px repeat(11, 1fr);
+    grid-template-columns: 95px repeat(10, 1fr) 122px;
     grid-template-rows: 60px repeat(7, minmax(50px, auto)) 50px;
 }
 
@@ -111,18 +111,59 @@ a{
 }
 
 /* 애니매이션 효과 주면 x축 스크롤 생김... */
-.speaker{
+/* .speaker{
     overflow-x: hidden;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 12;
     grid-column-end: 13;
+    border-left: 0.8px solid rgba(220, 220, 220, 0.8);
 
-    /* animation-name: shake;
+
+    animation-name: shake;
     animation-duration: 1.5s;
-    animation-iteration-count: infinite; */
-    /* animation-delay: 0.5s; */
+    animation-iteration-count: infinite; 
+    animation-delay: 0.5s;
+} */
+.speaker2{
+    text-align: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 12;
+    grid-column-end: 13;
 }
+.speaker3{
+    text-align: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 12;
+    grid-column-end: 13;
+    border-left: 0.8px solid rgba(220, 220, 220, 0.8);
+
+}
+.container #mouth2{
+    margin-bottom:-50px;
+    height: 70%;
+    width: 50%;
+    animation-name: close_mouth;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+.container #mouth2{
+    height:100%;
+}
+.container #mouth3{
+    margin-top:-10px;
+    height: 70%;
+    width: 50%;
+    animation-name: open_mouth;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+.container #mouth3{
+    height: 100%;
+}
+
 
 @keyframes shake {
     0%{
@@ -498,7 +539,6 @@ input{
     grid-row-start: 1;
     grid-row-end: 2;
 
-    border-right: 1px solid #cdcdcd;
     border-bottom: 1px solid #cdcdcd;
 }    
 #searchbox_line{
@@ -673,4 +713,21 @@ input{
     height: 100%;
     background-color: lavender;
     /* border-right: 1.2px solid #fff; */
+}
+
+@keyframes open_mouth{
+    10%{transform: translate(0, -2px);}
+    20%{transform: translate(0, 2px);}
+    40%{transform: translate(0, -2px);}
+    60%{transform: translate(0, 2px);}
+    80%{transform: translate(0, -2px);}
+    100%{transform: translate(0, 2px);}
+}
+@keyframes close_mouth{
+    10%{transform: translate(0, 2px);}
+    20%{transform: translate(0, -2px);}
+    40%{transform: translate(0, 2px);}
+    60%{transform: translate(0, -2px);}
+    80%{transform: translate(0, 2px);}
+    100%{transform: translate(0, -2px);}
 }

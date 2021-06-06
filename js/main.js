@@ -27,7 +27,7 @@ window.onload = function(){
 };
 
 $(document).ready(function(){
-    $('.container .speaker').click(function(){
+    $('.container .speaker3').click(function(){
         $('#mouth_img').animate({opacity:'1'},300);
     });
 
