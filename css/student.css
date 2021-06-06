@@ -52,35 +52,42 @@ a{
     line-height: 18px;
 }            
 .left_nav .department{
-    padding:5px;
+    position:fixed;
+    padding:7px;
     transform: rotate(270deg);
-
-    grid-row-start: 3;
-    grid-row-end: 5;
+    color: rgba(255, 255, 255, 0.9);
+    top:160px;
+    /* grid-row-start: 3;
+    grid-row-end: 5; */
 }
 .left_nav .department:hover{
-    background-color: #FF3900;
+    background-color: #FF5924;
 }
 .left_nav .professor{
+    position:fixed;
     transform: rotate(270deg);
-    padding:5px;
-    grid-row-start: 7;
-    grid-row-end: 8;
+    padding:7px;
+    top:290px;
+    /* grid-row-start: 7;
+    grid-row-end: 8; */
 }
 .left_nav .professor:hover{
-    background-color: #FF3900;
+    background-color: #FF5924;
 }
 .left_nav .student{
+    position:fixed;
+    background-color: #FF5924;
     border: 1.2px solid #FFFFFF;
-    background-color: #FF3900;
     border-radius: 50%;
-    padding:15px;
+    padding:15px 35px;
     transform: rotate(270deg);
-    grid-row-start: 13;
-    grid-row-end: 14;
+    left:-5px;
+    bottom:160px;
+    /* grid-row-start: 13;
+    grid-row-end: 14; */
 }
 .left_nav .student:hover{
-    background-color: #FF3900;
+    background-color: #FF5924;
 }
 
 .left_bottom_space {
@@ -574,7 +581,7 @@ input{
 }
 
 .right_side{
-    padding-top: 280px;
+    padding-top: 250px;
     display:flex;
     flex-direction: column;
     flex-wrap: nowrap;

@@ -9,19 +9,36 @@
     <link rel="stylesheet" type="text/css" href="css/select_detail.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script>
+        var check=0;
         function move(){
-        $('.main_content').stop().animate({scrollTop : '0'}, 400);
-    }
+            $('.main_content').stop().animate({scrollTop : '0'}, 400);
+        }
+        function toggleImg(){
+            if(check==0){
+                document.getElementById("dropdown_img").style.backgroundImage="url('./icon/select_lower.svg')";
+                check=1;
+            }
+            else{
+                document.getElementById("dropdown_img").style.backgroundImage="url('./icon/select_upper.svg')";
+                check=0;
+            }
+        }
+    
+    var audio1 = new Audio('./audio/museum.mp3');
+    var audio2 = new Audio('./audio/guest_book.mp3');
     </script>
 </head>
 
 <body>
+    <audio id="player" autoplay loop>
+        <source src="./audio/museum.mp3" type="audio/mp3">
+    </audio>
     <div class="container">
         <div class="logo"><a href="./index.html"><img src="./icon/main_logo.svg"></a></div>
         <div class="left_nav">
-            <div class="department"><a href="./map(absolute).html">디자인 학부</a></div>
-            <div class="professor"><a href="./interview.html">교수 인터뷰</a></div>
-            <div class="student"><a href="./student.html">학생</a></div>
+            <a href="./map(absolute).html" class="department">디자인 학부</a>
+            <a href="./interview.html" class="professor">교수 인터뷰</a>
+            <a href="./student.html" class="student">학생</a>
         </div>
         <div class="left_bottom_space"></div>
         <div class="right_nav">
@@ -96,23 +113,23 @@
                 </div> 
                 <div class="guestbook_form">
                     <div class="guestbook_recipient">To.</div>
-                    <div class="dropdown">
+                    <!-- <div class="dropdown">
                         <button class="dropbtn"></button>
                         <div class="dropdown-content">
                             <a href="#">박가연</a>
                             <a href="#">음선미</a>
                             <a href="#">양현용</a>
                         </div>
-                    </div>
-                    <!-- <select class="dropdown" name="browsers">
+                    </div> -->
+                    <select class="dropdown" id="dropdown_img" onclick="toggleImg()">
                         <option class="drop_content" value="박가연">박가연</option>
                         <option class="drop_content" value="음선미">음선미</option>
                         <option class="drop_content" value="양현용">양현용</option>
-                    </select> -->
-                    <input class="guestbook_content" type="text" placeholder="내용을 입력하여 주세요.">
+                    </select>
+                    <textarea class="guestbook_content" type="text" placeholder="졸업을 축하해주세요!"></textarea>
                     <div class="guestbook_sender">From.</div>
                     <input class="guestbook_sender_name" type="text">
-                    <img id="send" src="./icon/send.svg" onmouseover="this.src='./icon/send_hover.svg'" onmouseout="this.src='./icon/send.svg'">
+                    <img id="send" src="./icon/send.svg" onmouseover="this.src='./icon/send_hover.svg'" onmouseout="this.src='./icon/send.svg'" onclick="audio2.play()">
                 </div>
             </div>
             <div class="right_side_bottomline">

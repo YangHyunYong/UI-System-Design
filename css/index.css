@@ -95,31 +95,38 @@ a{
     line-height: 18px;
 }            
 .left_nav .department{
-    padding:5px;
+    position:fixed;
+    padding:7px;
     transform: rotate(270deg);
-
-    grid-row-start: 3;
-    grid-row-end: 5;
+    color: rgba(255, 255, 255, 0.9);
+    top:160px;
+    /* grid-row-start: 3;
+    grid-row-end: 5; */
 }
 .left_nav .department:hover{
     background-color: #FF5924;
 }
 .left_nav .professor{
+    position:fixed;
     transform: rotate(270deg);
-    padding:5px;
-    grid-row-start: 7;
-    grid-row-end: 8;
+    padding:7px;
+    top:290px;
+    /* grid-row-start: 7;
+    grid-row-end: 8; */
 }
 .left_nav .professor:hover{
     background-color: #FF5924;
 }
 .left_nav .student{
+    position:fixed;
     border: 1.2px solid #FFFFFF;
     border-radius: 50%;
-    padding:15px;
+    padding:15px 35px;
     transform: rotate(270deg);
-    grid-row-start: 13;
-    grid-row-end: 14;
+    left:-5px;
+    bottom:160px;
+    /* grid-row-start: 13;
+    grid-row-end: 14; */
 }
 .left_nav .student:hover{
     background-color: #FF5924;
@@ -173,7 +180,7 @@ a{
     height: 70%;
     width: 50%;
     animation-name: close_mouth;
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
     animation-iteration-count: infinite;
     opacity: 0;
 }
@@ -185,7 +192,7 @@ a{
     height: 70%;
     width: 50%;
     animation-name: open_mouth;
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
     animation-iteration-count: infinite;
     opacity: 0;
 }
@@ -201,8 +208,6 @@ a{
     grid-column-end: 11;
 }
 .cursor #par_next{
-    width:45px;
-    height: 45px;
     margin-top: -10px;
 }
 .finger_text{
@@ -317,6 +322,13 @@ a{
     text-align: justified;
 }
 
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
 
 .main_par_second h3{
     margin: 0;

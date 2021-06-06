@@ -53,32 +53,39 @@ a{
     line-height: 18px;
 }            
 .left_nav .department{
-    padding:5px;
+    position:fixed;
+    padding:7px;
     transform: rotate(270deg);
-
-    grid-row-start: 3;
-    grid-row-end: 5;
+    color: rgba(255, 255, 255, 0.9);
+    top:160px;
+    /* grid-row-start: 3;
+    grid-row-end: 5; */
 }
 .left_nav .department:hover{
     background-color: #FF5924;
 }
 .left_nav .professor{
+    position:fixed;
     background-color: #FF5924;
     transform: rotate(270deg);
-    padding:5px;
-    grid-row-start: 7;
-    grid-row-end: 8;
+    padding:7px;
+    top:290px;
+    /* grid-row-start: 7;
+    grid-row-end: 8; */
 }
 .left_nav .professor:hover{
     background-color: #FF5924;
 }
 .left_nav .student{
+    position:fixed;
     border: 1.2px solid #FFFFFF;
     border-radius: 50%;
-    padding:15px;
+    padding:15px 35px;
     transform: rotate(270deg);
-    grid-row-start: 13;
-    grid-row-end: 14;
+    left:-5px;
+    bottom:160px;
+    /* grid-row-start: 13;
+    grid-row-end: 14; */
 }
 .left_nav .student:hover{
     background-color: #FF5924;
@@ -185,9 +192,10 @@ a{
 .main_content .main_content_detail .professor_info{
     display: flex;
     justify-content: flex-end;
+    position: relative;
     align-items: center;
-    max-width:620px;
-    margin-bottom:10px;
+    margin:10px;
+    height: 25px;
 }
 .main_content .main_content_detail .professor_info .professor_position{
     font-family: AppleSDGothicNeoL00;
@@ -198,6 +206,8 @@ a{
     text-align: right;
     color: #ECECEC;
     padding-right:5px;
+    position: absolute;
+    right:180px;
 } 
 .main_content .main_content_detail .professor_info .professor_name{
     font-family: AppleSDGothicNeoB00;
@@ -207,6 +217,8 @@ a{
     line-height: 22px;
     text-align: right;
     color: #ECECEC;
+    position: absolute;
+    right:105px;
 } 
 .main_content .main_content_detail .question_sub{
     margin-top:15px;
@@ -243,13 +255,13 @@ a{
     margin: 10px 90px 0 90px;
 }
 .main_content .main_content_detail .question_area .num{
-    font-family: Roboto;
+    font-family: AppleSDGothicNeoB00;
     font-style: normal;
     font-weight: 900;
     font-size: 20px;
     line-height: 28px;
     color: #FFFFFF;
-    margin-right: 5px;
+    margin-right: 15px;
 }
 .main_content .main_content_detail .question_area .content{
     padding-top:3px;

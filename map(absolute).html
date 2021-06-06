@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shh_map</title>
     <link rel="stylesheet" type="text/css" href="css/map.css">
-
+    <script>
+        var audio = new Audio('./audio/footsteps.mp3');
+    </script>
 </head>
 
 <body>
@@ -17,9 +19,9 @@
             <div id="sector_form"></div>
         </div>
         <div class="left_nav">
-            <div class="department"><a href="./map(absolute).html">디자인 학부</a></div>
-            <div class="professor"><a href="./interview.html">교수 인터뷰</a></div>
-            <div class="student"><a href="./student.html">학생</a></div>
+            <a href="./map(absolute).html" class="department">디자인 학부</a>
+            <a href="./interview.html" class="professor">교수 인터뷰</a>
+            <a href="./student.html" class="student">학생</a>
         </div>
         <div class="left_bottom_space"></div>
         <div class="top_space">
@@ -44,7 +46,7 @@
                             <div class="area_text">창의작품</div>
                         </div>
                     </a>
-                    <a href="./select.html">
+                    <a href="./select.html" onclick="audio.play();">
                         <div class="area1_third">
                             <div class="area_text">개인작품</div>
                         </div>

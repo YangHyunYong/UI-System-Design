@@ -11,9 +11,13 @@
     <script type="text/javascript" src="./js/student_list_move.js"></script>
 
     <script>
+        var before_seq=0;
         function move(seq){
-            var h = (seq-1)*94 + 10;
+            var h = (seq-1)*94;
+            $('#initial' + before_seq).css({ color:"#ffffe6" });        
             $('.right_side').stop().animate({scrollTop : h}, 400);
+            $('#initial' + seq).css({ color:"#ff5824" });     
+            before_seq=seq;   
         }
     </script>
 </head>
@@ -25,9 +29,9 @@
             <div id="sector_form"></div>
         </div>
         <div class="left_nav">
-            <div class="department"><a href="./map(absolute).html">디자인 학부</a></div>
-            <div class="professor"><a href="./interview.html">교수 인터뷰</a></div>
-            <div class="student"><a href="./student.html">학생</a></div>
+            <a href="./map(absolute).html" class="department">디자인 학부</a>
+            <a href="./interview.html" class="professor">교수 인터뷰</a>
+            <a href="./student.html" class="student">학생</a>
         </div>
         <div class="left_bottom_space"></div>
 
@@ -42,16 +46,16 @@
 
         <div class="middle">
             <div id="initialbox">
-                <button onclick="move('1')">ㄱ</button>
-                <button onclick="move('2')">ㄴ</button>
-                <button onclick="move('3')">ㄷ</button>
+                <button class="initial_btn" onclick="move('1')">ㄱ</button>
+                <button class="initial_btn" onclick="move('2')">ㄴ</button>
+                <button class="initial_btn" onclick="move('3')">ㄷ</button>
                 <span>ㄹ</span>
-                <button onclick="move('4')">ㅁ</button>
-                <button onclick="move('5')">ㅂ</button>
-                <button onclick="move('6')">ㅅ</button>
-                <button onclick="move('7')">ㅇ</button>
-                <button onclick="move('8')">ㅈ</button>
-                <button onclick="move('9')">ㅊ</button>
+                <button class="initial_btn" onclick="move('4')">ㅁ</button>
+                <button class="initial_btn" onclick="move('5')">ㅂ</button>
+                <button class="initial_btn" onclick="move('6')">ㅅ</button>
+                <button class="initial_btn" onclick="move('7')">ㅇ</button>
+                <button class="initial_btn" onclick="move('8')">ㅈ</button>
+                <button class="initial_btn" onclick="move('9')">ㅊ</button>
                 <span>ㅋ</span>
                 <span>ㅌ</span>
                 <span>ㅍ</span>
@@ -148,72 +152,72 @@
             <div class="line"></div>
             <div id="nameboxs">
                 <div class="namebox">
-                    <div class="name" id="initial1">                        
-                        <h4>ㄱ</h4>
+                    <div class="name">                        
+                        <h4 id="initial1">ㄱ</h4>
                         <div class="item">
                             <div>김지현</div><div>고은영</div><div>강인한</div><div>구리시</div>
                         </div>
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name" id="initial2">
-                        <h4>ㄴ</h4>
+                    <div class="name">
+                        <h4 id="initial2">ㄴ</h4>
                         <div class="item">
                             <div>나우리</div><div>남인철</div><div>남동구</div><div>너구리</div>
                         </div>
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name" id="initial3">
-                        <h4>ㄷ</h4>
+                    <div class="name">
+                        <h4 id="initial3">ㄷ</h4>
                         <div class="item">
                             <div>동대문</div><div>동대문</div><div>동대문</div><div>동대문</div>
                         </div>
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name" id="initial4">
-                        <h4>ㅁ</h4>
+                    <div class="name">
+                        <h4 id="initial4">ㅁ</h4>
                         <div class="item">
                             <div>마동석</div><div>마동석</div><div>마동석</div>
                         </div>    
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name" id="initial5">
-                        <h4>ㅂ</h4>
+                    <div class="name">
+                        <h4 id="initial5">ㅂ</h4>
                         <div class="item">
                             <div>박신양</div><div>박신양</div><div>박신양</div><div>박신양</div>
                         </div>
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name" id="initial6">
-                        <h4>ㅅ</h4>
+                    <div class="name">
+                        <h4 id="initial6">ㅅ</h4>
                         <div class="item">
                             <div>신세경</div><div>신세경</div><div>신세경</div>
                         </div>
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name" id="initial7">
-                        <h4>ㅇ</h4>
+                    <div class="name">
+                        <h4 id="initial7">ㅇ</h4>
                         <div class="item">
                             <div>이승철</div><div>이승철</div><div>이승철</div><div>이승철</div>
                         </div>
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name" id="initial8">
-                        <h4>ㅈ</h4>
+                    <div class="name">
+                        <h4 id="initial8">ㅈ</h4>
                         <div class="item">
                             <div>정인</div><div>정인</div><div>정인</div>
                         </div>
                     </div>
                 </div>
                 <div class="namebox">
-                    <div class="name" id="initial9">
-                        <h4>ㅊ</h4>
+                    <div class="name">
+                        <h4 id="initial9">ㅊ</h4>
                         <div class="item">
                             <div>차인표</div><div>차인표</div><div>차인표</div><div>차인표</div>
                         </div>
