@@ -514,7 +514,14 @@ select::-ms-expand {
   }
   .dropdown-content a:hover {background-color: #ff5924;}
   .dropdown:hover .dropdown-content {display: block;}  */
-
+textarea{
+    color:#FFFFFF;
+    background-color: #1d1d1d;
+    border: 1px solid #B0B0B0;
+    resize:none;
+    outline:none;
+    padding:7px;
+}
 .right_side .guestbook .guestbook_content{
     color:#FFFFFF;
     background-color: #1d1d1d;

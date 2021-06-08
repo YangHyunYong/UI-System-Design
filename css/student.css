@@ -169,6 +169,7 @@ textarea{
     border: 1px solid #B0B0B0;
     resize:none;
     outline:none;
+    padding:7px;
 }
 
 @keyframes shake {

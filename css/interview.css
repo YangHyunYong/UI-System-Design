@@ -292,7 +292,7 @@ a{
 }
 .main_content .main_content_detail .question_area .answer{
     display: flex;
-    margin: 10px 90px 0 90px;
+    margin: 10px 90px 30px 90px;
 }
 .main_content .main_content_detail .question_area .num{
     font-family: AppleSDGothicNeoB00;

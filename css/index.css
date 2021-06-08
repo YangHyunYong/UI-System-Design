@@ -14,7 +14,7 @@ body {
 
 .h2{
     position: absolute;
-    color: #333;
+    color: #1d1d1d;
     font-size: 50px;
     margin-left: 50px;
     margin-top: 40px;
@@ -440,12 +440,11 @@ a{
 }
 
 .par_box{
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-.container_info .par_box{
-    grid-row-start: 2;
-    grid-row-end: 3;
+    position: absolute;
+    width: 50vw;
+    right: 0%;
+    top: 2%;
+    transform: translate(0, -50%);
 }
 
 #par_next{
@@ -516,7 +515,7 @@ p {
     font-family: KoPubWorldDotum;
     font-style: normal;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 2.5vh;
     line-height: 30px;
     letter-spacing: -0.01em;
     text-align: left;
@@ -525,8 +524,8 @@ p {
     font-family: KoPubWorldDotum;
     font-style: normal;
     font-weight: 500;
-    font-size: 1.1vw;
-    line-height: 2.5vw;
+    font-size: 2vh;
+    line-height: 2vw;
     letter-spacing: -0.01em;
     word-spacing:1.3vw;
     margin:0 28px 1.5vw 0;
