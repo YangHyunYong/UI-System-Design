@@ -32,7 +32,19 @@
                 var posTop = (page - 1) * $(window).height();
                 $html.animate({ scrollTop: posTop });
             });
-                
+
+            
+            $('#ticket_back').click(function () {
+                // $('#ticket_red').animate({'transform':'rotate(30deg)'}, 1000)
+                $('#ticket_red').css({ 'transform': 'rotate(30deg)' })
+
+                setTimeout(function () {
+                    $('#ticket_back').css({ 'display': 'none' })
+                }, 2100);
+
+                $('#ticket_back').animate({ 'opacity': '0' }, 2200)
+            });
+            
     </script>
     <!-- <link rel="stylesheet" type="text/css" href="css/form.css"> -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
