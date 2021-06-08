@@ -290,6 +290,7 @@ a{
     min-width: 57px;
     max-height: 95px;
     min-height: 50px;
+    cursor: pointer;
 }
 .main_content .content_detail .department1 .area_img .department_desc1{
     position:absolute;
@@ -306,7 +307,7 @@ a{
 .main_content .content_detail .department2 #department2_img{
     position: relative;
     width:50%;
-    margin-right:8vw;
+    margin-left:4vw;
     transform:translate(81%,30%);
     max-height: 190px;
     min-height: 105px;
@@ -321,16 +322,16 @@ a{
     height:14.324vw;
     max-height: 186px;
     min-height: 105px;
-    max-width: 566px;
+    max-width: 580px;
     min-width: 285px;
 }
 .main_content .content_detail .department2 .area2_first{
     position: absolute;
     width:9.5vw;
     height:4vw;
-    bottom:76%;
-    right:-33%;
-    transform: translate(-76%,33%);
+    bottom:77%;
+    right:-43%;
+    transform: translate(-77%,43%);
     max-width: 135px;
     min-width: 65px;
     max-height: 58px;
@@ -341,9 +342,9 @@ a{
     position: absolute;
     width:11.5vw;
     height:9vw;
-    bottom:77%;
-    right:-76%;
-    transform: translate(-77%,76%);
+    bottom:84%;
+    right:-88%;
+    transform: translate(-84%,88%);
     max-width: 160px;
     min-width: 80px;
     max-height: 128px;
@@ -353,9 +354,9 @@ a{
     position: absolute;
     width:8.5vw;
     height:5.5vw;
-    bottom:60%;
-    right:-97%;
-    transform: translate(-60%,97%);
+    bottom:65%;
+    right:-108%;
+    transform: translate(-65%,108%);
     max-width: 115px;
     min-width: 58px;
     max-height: 78px;
@@ -364,7 +365,7 @@ a{
 
 .main_content .content_detail .department2 .department_desc2{
     position:absolute;
-    width: 65%;
+    width: 68%;
     top:3%;
     left:20%;
 }
@@ -414,6 +415,12 @@ a{
     line-height: 28px;
     letter-spacing: 0.01em;
     padding-bottom: 10px;
+    display:flex;
+    align-items: center;
+}
+.desc_title>span{
+    font-size:14px;
+    padding-right:10px;
 }
 .desc_content{
     font-family: KoPubWorldDotum;

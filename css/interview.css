@@ -228,8 +228,8 @@ a{
 .main_content .main_content_detail .professor_interview{
     border: 1px solid #fff;
     margin: auto;
-    width:490px;
-    height: 270px;
+    width:491px;
+    height: 271px;
 }
 .main_content .main_content_detail .professor_info{
     display: flex;
@@ -261,7 +261,7 @@ a{
 
 } 
 .main_content .main_content_detail .question_sub{
-    margin-top:15px;
+    margin:15px 0 5px 0;
     text-align: center;
     font-family: KoPubWorldDotum;
     font-style: normal;
@@ -307,10 +307,11 @@ a{
     padding-top:3px;
     font-family: KoPubWorldDotum;
     font-style: normal;
-    font-weight: 500;
     font-size: 14px;
     line-height: 22px;
     color: #F3F3F3;
+    opacity: 0.9;
+    letter-spacing: 0.03em;
 }
 
 .right_side {
@@ -361,6 +362,7 @@ a{
     padding-left:25px;
 }
 .right_side .media_professor .media_professor_name{
+    cursor: pointer;
     font-family: KoPubWorldDotum;
     font-style: normal;
     font-weight: 500;
@@ -370,6 +372,7 @@ a{
     color: #B0B0B0;
 }
 .right_side .industry_professor .industry_professor_name{
+    cursor: pointer;
     font-family: KoPubWorldDotum;
     font-style: normal;
     font-weight: 500;

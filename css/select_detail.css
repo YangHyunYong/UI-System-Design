@@ -169,6 +169,7 @@ a{
 }
 
 .right_nav_content {
+    cursor: pointer;
     text-align: center;
     flex: 1;
     font-family: AppleSDGothicNeoEB00;
@@ -211,7 +212,8 @@ a{
     grid-column-end: 9;
     border: 1.5px solid rgba(220, 220, 220, 0.9);
     z-index: 1;
-    background: #1d1d1d;    
+    background: #1d1d1d;  
+    cursor: pointer;  
 }
 #cancel_icon:hover{
     background-color: #ff5924;
@@ -239,6 +241,7 @@ a{
     border: 1.5px solid rgba(220, 220, 220, 0.9);
     z-index: 1;
     background: #1d1d1d;    
+    cursor: pointer;  
 }
 #move_top_icon:hover{
     background-color: #ff5924;
@@ -411,7 +414,9 @@ a{
 .right_side .caption .caption_content_list .caption_content_icon{
     padding-top:5px;
 }        
-
+.right_side .caption .caption_content_list .caption_content_icon>img{
+    cursor: pointer;
+}
 
 
 .right_side .guestbook {
@@ -469,6 +474,7 @@ input{
     color: rgba(255, 255, 255, 0.9);
     outline:0;
     width:140px;
+    cursor: pointer;  
 }
 select {
     padding: 5px 0 5px 5px;
@@ -540,6 +546,7 @@ select::-ms-expand {
     grid-row-end: 8;
     grid-column-start: 8;
     grid-column-end: 9;
+    cursor: pointer;  
 }
 .right_side .guestbook #send:hover{
     /* background-color:#ff5924;
@@ -575,6 +582,7 @@ select::-ms-expand {
     margin: auto;
     grid-column-start: 1;
     grid-column-end: 2;
+    cursor: pointer;
 }
 .right_side .right_side_bottomline .right_side_bottomline_left #arrow_left{
     display: block;
@@ -586,6 +594,7 @@ select::-ms-expand {
     margin: auto;
     grid-column-start: 4;
     grid-column-end: 5;
+    cursor: pointer;
 }
 .right_side .right_side_bottomline .right_side_bottomline_right #arrow_right{
     display: block;

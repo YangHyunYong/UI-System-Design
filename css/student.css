@@ -163,7 +163,13 @@ a{
 .container #mouth3{
     height: 100%;
 }
-
+textarea{
+    color:#FFFFFF;
+    background-color: #1d1d1d;
+    border: 1px solid #B0B0B0;
+    resize:none;
+    outline:none;
+}
 
 @keyframes shake {
     0%{
@@ -338,6 +344,20 @@ h3{
     
     color: #B2B2B2;
 }
+.detail_graduate>p{
+    font-family: KoPubWorldDotum;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+}
+.detail_good>p{
+    font-family: KoPubWorldDotum;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+}
 
 .detail_good{
     display: grid;
@@ -399,10 +419,28 @@ h3{
 
 .list_date{  
     font-size:12px;
+    color: #fff;
+    opacity: 0.6;
 }
 
+.list>div{
+    font-family: KoPubWorldDotum;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    color: #E8E8E8;
+}
 .list>div>span{
     font-size:14px;
+}
+.list>p{
+    font-family: KoPubWorldDotum;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 12px;
+    padding-bottom:5px;
+    color: #FFFFFF;
 }
 
 ul{
@@ -593,7 +631,7 @@ input{
     text-align: center;
 }
 
-#initialbox>div,span,button{
+#initialbox>div,button{
     padding: 0 3px;
     font-family: 'KoPubWorldDotum';
     font-weight: bold;
@@ -605,7 +643,6 @@ input{
     outline:0;
     /* border: 1px solid blue; */
     }
-
 #initialbox>span{
     color:#343434;
 }
@@ -621,25 +658,19 @@ input{
 }
 
 .right_side{
-    padding-top: 250px;
+    padding-top:260px;
     display:flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
     overflow-y:scroll;
     overflow-x: hidden;
-
-    
     /* border: 1px solid yellow; */
-
     grid-column-start:9;
     grid-column-end:13;
     grid-row-start: 3;
     grid-row-end: 10;
 }
-
-
-
 
 #nameboxs{
     display:flex;
@@ -680,8 +711,10 @@ input{
 
 .namebox .item{
     display:flex;
-    margin: 24px 0;   
+    flex-grow: 1;
+    padding: 24px 12px;   
     height:100%;
+    border-left: 0.5px solid #782C28;
 }
 
 .namebox .item>div{
